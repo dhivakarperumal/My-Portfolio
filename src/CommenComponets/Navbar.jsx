@@ -32,7 +32,7 @@ function Navbar() {
       <nav aria-label="Primary navigation">
         <PageContainer
           fullWidth
-          className="flex min-h-[88px] items-center justify-between gap-6"
+          className="flex min-h-[68px] items-center justify-between gap-6"
         >
         <Link to="/" className="flex shrink-0 items-center gap-2" onClick={closeMobileMenu}>
           <img
@@ -83,10 +83,10 @@ function Navbar() {
           <a
             href="/resume.pdf"
             download
-            className="portfolio-resume-button flex items-center gap-2 rounded-xl px-4 py-2.5 text-[13px] font-bold transition"
+            className="portfolio-resume-button flex items-center gap-3 rounded-xl px-4 py-2 transition"
           >
-            Download Resume
-            <Download size={14} />
+            <span>Download Resume</span>
+            <Download className="portfolio-resume-icon" size={20} />
           </a>
         </div>
 
@@ -119,8 +119,7 @@ function Navbar() {
               download
               className="portfolio-mobile-resume mt-2 flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-bold"
             >
-              Download Resume
-              <Download size={15} />
+              Download Resume <Download size={15} />
             </a>
           </div>
         </div>

@@ -1,0 +1,252 @@
+const myApps = [
+    {
+        title: "Life Tracking App",
+        cardTitle: "Life Ledger App",
+        imageAlt: "Life Ledger personal tracking dashboard",
+        subtitle: "Personal Finance, Diary & Memories",
+        projectSub: "MobileApp · Personal Life Tracking",
+        technology: "React Native",
+        liveUrl: "https://lifetracking.qtechx.com/",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A personal dashboard app for tracking expenses, managing a budget, writing diary entries, and keeping life memories together.",
+        images: [
+            "assets/MobileApp/l1.jpeg",
+            "assets/MobileApp/l2.jpeg",
+            "assets/MobileApp/l3.jpeg",
+            "assets/MobileApp/l4.jpeg",
+            "assets/MobileApp/l5.jpeg",
+        ],
+        delay: 100
+    },
+    {
+        title: "Kavi Dry Fruits App",
+        cardTitle: "Kavi’s Dry Fruits",
+        imageAlt: "Kavi’s Dry Fruits online store",
+        subtitle: "Dry Fruits & Nuts Shopping",
+        projectSub: "MobileApp · Grocery E-Commerce",
+        technology: "React Native",
+        playStoreUrl: "https://play.google.com/store/apps/details?id=com.kaviapp",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A shopping app for browsing Kavi’s dry fruits and nuts, discovering products, and placing online orders.",
+        images: [
+            
+           
+            "assets/MobileApp/k3.webp",
+            "assets/MobileApp/k4.webp",
+            "assets/MobileApp/k5.webp",
+            "assets/MobileApp/k6.webp",
+            "assets/MobileApp/k1.webp",
+             "assets/MobileApp/k2.webp",
+        ],
+        delay: 150
+    },
+    
+    {
+        title: "Supermarket Shopping App",
+        cardTitle: "Supermarket & Grocery App",
+        imageAlt: "Supermarket and grocery shopping",
+        subtitle: "Online Grocery Shopping & Delivery",
+        projectSub: "MobileApp · Grocery E-Commerce",
+        technology: "React Native",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A grocery shopping app for discovering supermarket products, building an order, and arranging delivery.",
+        images: [
+            "assets/MobileApp/s1.jpeg",
+            "assets/MobileApp/s2.jpeg",
+            "assets/MobileApp/s3.jpeg",
+            "assets/MobileApp/s4.jpeg"
+        ],
+        delay: 250
+    },
+    {
+        title: "Supermarket Billing App",
+        cardTitle: "Supermarket Billing App",
+        imageAlt: "Supermarket billing and inventory dashboard",
+        subtitle: "Inventory, Billing & Sales Management",
+        projectSub: "Mobile App · Supermarket Billing",
+        technology: "React Native",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A supermarket management app for tracking inventory, managing bills, and monitoring sales and revenue.",
+        images: [
+            "assets/MobileApp/b1.jpeg",
+            "assets/MobileApp/b2.jpeg",
+            "assets/MobileApp/b3.jpeg",
+            "assets/MobileApp/b4.jpeg",
+            "assets/MobileApp/b5.jpeg"
+        ],
+        delay: 275
+    },
+    {
+        title: "Gym & Fitness App",
+        cardTitle: "DAP Fitness App",
+        imageAlt: "DAP gym and fitness website",
+        subtitle: "Fitness & Gym Membership",
+        projectSub: "MobileApp · Fitness & Wellness",
+        technology: "React Native",
+        playStoreUrl: "https://play.google.com/store/apps/details?id=com.dapfitnessstudio.app",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A fitness app concept for exploring gym services, discovering workout options, and keeping members connected with DAP Fitness.",
+        images: [
+            "assets/MobileApp/d1.webp",
+            "assets/MobileApp/d2.webp",
+            "assets/MobileApp/d3.webp",
+            "assets/MobileApp/d4.webp",
+            "assets/MobileApp/d5.webp",
+        ],
+        delay: 300
+    },
+    {
+        title: "Q Techx Company App",
+        cardTitle: "Q Techx App",
+        imageAlt: "Q Techx company management system",
+        subtitle: "Company Services & Management",
+        projectSub: "MobileApp · Business Management",
+        technology: "React Native",
+        playStoreUrl: "https://play.google.com/store/apps/details?id=com.qtechx.qtechxapp",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A company app concept for accessing Q Techx services and business management features from a mobile device.",
+        images: [
+            
+            "assets/MobileApp/q2.webp",
+            "assets/MobileApp/q3.webp",
+            "assets/MobileApp/q4.webp",
+            "assets/MobileApp/q5.webp",
+            "assets/MobileApp/q6.webp",
+            "assets/MobileApp/q7.webp",
+            "assets/MobileApp/q1.webp",
+        ],
+        delay: 350
+    },
+    {
+        title: "Veetu Rusi Food User App",
+        cardTitle: "Veetu Rusi App",
+        imageAlt: "Veetu Rusi food ordering website",
+        subtitle: "Food Ordering & Delivery",
+        projectSub: "MobileApp · Food & Restaurant",
+        technology: "React Native",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A food ordering app concept for exploring Veetu Rusi dishes and ordering meals for delivery.",
+        images: [
+            "assets/MobileApp/v1.jpeg",
+            "assets/MobileApp/v2.jpeg",
+            "assets/MobileApp/v3.jpeg",
+            "assets/MobileApp/v4.jpeg",
+            "assets/MobileApp/v5.jpeg"
+        ],
+        delay: 400
+    },
+    {
+        title: "Veetu Rusi Home Chef App",
+        cardTitle: "Veetu Rusi Home Chef",
+        imageAlt: "Veetu Rusi Home Chef dashboard",
+        subtitle: "Home Chef Orders & Kitchen Management",
+        projectSub: "Mobile App · Home Chef & Food",
+        technology: "React Native",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A home chef app for managing food orders, sharing dishes, tracking earnings, and maintaining a kitchen menu.",
+        images: [
+            "assets/MobileApp/vh1.jpeg",
+            "assets/MobileApp/vh2.jpeg",
+            "assets/MobileApp/vh3.jpeg",
+            "assets/MobileApp/vh4.jpeg",
+            "assets/MobileApp/vh5.jpeg"
+        ],
+        delay: 425
+    },
+    {
+        title: "Car Service Booking App",
+        cardTitle: "Car Service Booking",
+        imageAlt: "Car service booking and management system",
+        subtitle: "Vehicle Service Booking & Management",
+        projectSub: "MobileApp · Automotive Services",
+        technology: "React Native",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A car service app concept for finding vehicle services, booking appointments, and managing service requests.",
+        images: [
+            "assets/MobileApp/c2.jpeg",
+            "assets/MobileApp/c1.jpeg",
+            "assets/MobileApp/c3.jpeg",
+            "assets/MobileApp/c4.jpeg",
+        ],
+        delay: 450
+    },
+    {
+        title: "TrackFina – Admin App",
+        cardTitle: "TrackFina – Admin",
+        imageAlt: "TrackFina Admin",
+        subtitle: "Finance Tracking App",
+        projectSub: "React Native · Financial Tracking",
+        technology: "React Native · JavaScript · Node.js · Express.js · MySQL",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "The administrative portal for TrackFina, providing an overview of financial tracking data, user management, and analytics.",
+        images: [
+            
+            "assets/MobileApp/t3.jpeg",
+            "assets/MobileApp/t4.jpeg",
+            "assets/MobileApp/t5.jpeg",
+            "assets/MobileApp/t6.jpeg",
+            "assets/MobileApp/t1.jpeg",
+            "assets/MobileApp/t2.jpeg",
+        ],
+        delay: 200
+    },
+    {
+        title: "TrackFina – Agent App",
+        cardTitle: "TrackFina – Agent",
+        imageAlt: "TrackFina Agent",
+        subtitle: "Agent Portal App",
+        projectSub: "React Native · Agent Portal",
+        technology: "React Native · JavaScript · Node.js · Express.js · MySQL",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A mobile portal for TrackFina agents to manage daily logs, client data, and on-the-go financial updates.",
+        images: [
+            
+            "assets/MobileApp/ta2.jpeg",
+            "assets/MobileApp/ta3.jpeg",
+            "assets/MobileApp/ta4.jpeg",
+            "assets/MobileApp/ta1.jpeg",
+        ],
+        delay: 250
+    },
+    {
+        title: "Restaurant POS App",
+        cardTitle: "Restaurant POS App",
+        imageAlt: "Restaurant POS",
+        subtitle: "Food Ordering & Billing",
+        projectSub: "React Native · Food & Billing",
+        technology: "React Native · JavaScript · Node.js · Express.js · MySQL",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A restaurant point-of-sale app for quick billing, menu navigation, table management, and receipt generation.",
+        images: [
+            "assets/MobileApp/pos1.jpeg",
+            "assets/MobileApp/p2.jpeg",
+            "assets/MobileApp/p3.jpeg",
+            "assets/MobileApp/p4.jpeg"
+        ],
+        delay: 300
+    },
+];
