@@ -7,6 +7,7 @@ import ScrollToTop from "./CommenComponets/ScrollToTop";
 import ScrollNavigator from "./CommenComponets/ScrollNavigator";
 import Loader from "./CommenComponets/Loader";
 import FloatingActions from "./CommenComponets/FloatingActions";
+import TopHeader from "./CommenComponets/TopHeader";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -34,6 +35,7 @@ function App() {
         transition={{ duration: 0.35, ease: "easeOut" }}
         className="flex flex-col min-h-screen"
       >
+        <TopHeader />
         <Navbar />
 
         <ScrollToTop />
