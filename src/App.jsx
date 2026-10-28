@@ -7,12 +7,18 @@ import ScrollToTop from "./CommenComponets/ScrollToTop";
 import ScrollNavigator from "./CommenComponets/ScrollNavigator";
 import Loader from "./CommenComponets/Loader";
 import FloatingActions from "./CommenComponets/FloatingActions";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
-  const [loading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const location = useLocation();
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setLoading(false), 900);
+
+    return () => window.clearTimeout(timer);
+  }, []);
 
   if (loading) {
     return <Loader />;
