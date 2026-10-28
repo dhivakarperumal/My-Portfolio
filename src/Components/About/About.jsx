@@ -1,13 +1,14 @@
 import { ArrowRight, BriefcaseBusiness, Download, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../../../public/Images/tab.png";
+import PageContainer from "../../CommenComponets/PageContainer";
 
 function About() {
   return (
     <section className="about-section">
       <div className="about-decoration about-decoration-left" />
       <div className="about-decoration about-decoration-right" />
-      <div className="page-container about-content">
+      <PageContainer className="about-content">
         <div className="about-copy">
           <p className="about-eyebrow">ABOUT ME</p>
           <h1>Crafting <span>Digital</span><br />Experiences That Matter</h1>
@@ -46,7 +47,7 @@ function About() {
             <span><strong>2.5+</strong><small>Years Experience</small></span>
           </div>
         </div>
-      </div>
+      </PageContainer>
     </section>
   );
 }

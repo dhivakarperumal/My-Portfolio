@@ -1,11 +1,15 @@
-import { ArrowRight, CheckCircle2, Download } from "lucide-react";
+import { ArrowRight, CheckCircle2, Download, Mail, MapPin, Phone, GraduationCap, Cake } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../../../public/Images/tab.png";
+import PageContainer from "../../CommenComponets/PageContainer";
 
-const highlights = [
-  "2.5+ years of development experience",
-  "Responsive web and mobile applications",
-  "Clean, scalable, and maintainable code",
+const personalDetails = [
+  { label: "Birthday", value: "30 May 2000", icon: Cake },
+  { label: "City", value: "Tirupathur", icon: MapPin },
+  { label: "Study", value: "Anna University", icon: GraduationCap },
+  { label: "Age", value: "24 Years", icon: Cake },
+  { label: "Degree", value: "MCA", icon: GraduationCap },
+  { label: "Phone", value: "+91 8940450960", icon: Phone },
 ];
 
 function AboutPreview() {
@@ -14,7 +18,7 @@ function AboutPreview() {
       <div className="about-preview-grid" />
       <div className="about-preview-glow about-preview-glow-left" />
       <div className="about-preview-glow about-preview-glow-right" />
-      <div className="page-container about-preview-content">
+      <PageContainer className="about-preview-content">
         <div className="about-preview-visual">
           <div className="about-preview-orbit" />
           <div className="about-preview-orbit about-preview-orbit-inner" />
@@ -26,17 +30,32 @@ function AboutPreview() {
 
         <div className="about-preview-copy">
           <p className="about-eyebrow">ABOUT ME</p>
-          <h2>Building digital experiences with <span>purpose.</span></h2>
+          <h2>React JS Full Stack Developer <span>&amp; Frontend Developer</span></h2>
           <p>
-            I&apos;m Dhivakar P, a Full Stack Developer who enjoys turning ideas
-            into reliable, user-friendly products. I combine thoughtful design
-            with practical engineering to build applications that make an impact.
+            Full Stack Developer with 2.3 years of experience in developing responsive,
+            interactive, and user-friendly web applications. Skilled in HTML5, CSS3,
+            JavaScript, React.js, Bootstrap, and Tailwind CSS for frontend development.
+            Experienced in backend development using Node.js and Express.js, with database
+            management using MySQL and Firebase.
           </p>
-          <ul>
-            {highlights.map((highlight) => (
-              <li key={highlight}><CheckCircle2 size={18} /> {highlight}</li>
+          <p className="about-preview-secondary-copy">
+            Proficient in REST API integration, reusable component development, and version
+            control using Git and GitHub. Dedicated to writing clean, maintainable code,
+            optimizing application performance, and building scalable applications with
+            seamless user experiences.
+          </p>
+          <div className="about-preview-details">
+            {personalDetails.map(({ label, value, icon: Icon }) => (
+              <div className="about-preview-detail" key={label}>
+                <Icon size={15} />
+                <span><small>{label}</small><strong>{value}</strong></span>
+              </div>
             ))}
-          </ul>
+            <div className="about-preview-detail about-preview-email">
+              <Mail size={15} />
+              <span><small>Email</small><strong>dhivakarp305@gmail.com</strong></span>
+            </div>
+          </div>
           <div className="about-preview-actions">
             <Link to="/about" className="about-preview-primary">
               Discover More <ArrowRight size={17} />
@@ -44,10 +63,13 @@ function AboutPreview() {
             <a href="/resume.pdf" download className="about-preview-secondary">
               Resume <Download size={16} />
             </a>
+            <a href="https://wa.me/+918940450960?text=Hello%20there!" target="_blank" rel="noreferrer" className="about-preview-whatsapp">
+              <Phone size={16} /> Chat with Me
+            </a>
           </div>
           <div className="about-preview-signature">Turning ideas into meaningful digital experiences.</div>
         </div>
-      </div>
+      </PageContainer>
     </section>
   );
 }
