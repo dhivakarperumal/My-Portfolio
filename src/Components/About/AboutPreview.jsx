@@ -1,4 +1,5 @@
-import { ArrowRight, CheckCircle2, Download, Mail, MapPin, Phone, GraduationCap, Cake } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, CheckCircle2, Download, Mail, MapPin, Phone, GraduationCap, Cake, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../../../public/Images/tab.png";
 import PageContainer from "../../CommenComponets/PageContainer";
@@ -13,6 +14,8 @@ const personalDetails = [
 ];
 
 function AboutPreview() {
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
     <section className="about-preview-section">
       <div className="about-preview-grid" />
@@ -22,10 +25,30 @@ function AboutPreview() {
         <div className="about-preview-visual">
           <div className="about-preview-orbit" />
           <div className="about-preview-orbit about-preview-orbit-inner" />
-          <div className="about-preview-card">
+          <button
+            type="button"
+            className="about-preview-card"
+            onClick={() => setContactOpen((open) => !open)}
+            aria-expanded={contactOpen}
+            aria-controls="profile-contact-menu"
+            aria-label="Show contact details"
+          >
             <img src={logo} alt="Dhivakar P" />
-          </div>
+          </button>
+          {contactOpen && (
+            <div id="profile-contact-menu" className="about-profile-contact-menu">
+              <strong>Let&apos;s connect</strong>
+              <a href="tel:+918940450960"><Phone size={15} /> +91 8940450960</a>
+              <a href="mailto:dhivakarp305@gmail.com"><Mail size={15} /> dhivakarp305@gmail.com</a>
+              <a href="https://wa.me/+918940450960?text=Hello%20there!" target="_blank" rel="noreferrer">
+                <MessageCircle size={15} /> Chat With Us
+              </a>
+            </div>
+          )}
           <span className="about-preview-badge"><strong>2.5+</strong> Years Experience</span>
+          <a href="/resume.pdf" download className="about-preview-cv-button">
+            <Download size={18} /> Download CV
+          </a>
         </div>
 
         <div className="about-preview-copy">
@@ -60,11 +83,8 @@ function AboutPreview() {
             <Link to="/about" className="about-preview-primary">
               Discover More <ArrowRight size={17} />
             </Link>
-            <a href="/resume.pdf" download className="about-preview-secondary">
-              Resume <Download size={16} />
-            </a>
             <a href="https://wa.me/+918940450960?text=Hello%20there!" target="_blank" rel="noreferrer" className="about-preview-whatsapp">
-              <Phone size={16} /> Chat with Me
+              <Phone size={16} /> Chat With Us
             </a>
           </div>
           <div className="about-preview-signature">Turning ideas into meaningful digital experiences.</div>

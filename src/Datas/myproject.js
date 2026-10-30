@@ -1,5 +1,6 @@
 const myProjects = [
     {
+        id: 1,
         title: "DAP Gym Website",
         cardTitle: "DAP Fitness & Gym",
         subtitle: "Fitness & Gym Website",
@@ -14,6 +15,7 @@ const myProjects = [
         delay: 100
     },
     {
+        id: 2,
         title: "Q Techx Company Management System",
         cardTitle: "Q Techx Company Management System",
         subtitle: "Company Management System",
@@ -29,6 +31,7 @@ const myProjects = [
     },
     
     {
+        id: 3,
         title: "Saree World Website",
         cardTitle: "Saree World Online Store",
         subtitle: "Saree & Fashion E-Commerce",
@@ -43,6 +46,7 @@ const myProjects = [
         delay: 300
     },
     {
+        id: 4,
         title: "Sri Saravana Shopping Website",
         cardTitle: "Sri Saravana Shopping",
         subtitle: "Online Shopping & E-Commerce",
@@ -53,10 +57,11 @@ const myProjects = [
         badgeIcon: "fas fa-globe",
         description: "A modern web application built with robust performance and responsive design.",
         images: ["assets/images/gallery/sravana1.png", "assets/images/gallery/sravanaa1.png"],
-        liveUrl: "https://saree.qtechx.com/",
+        liveUrl: "https://saravanashoppings.com/",
         delay: 400
     },
     {
+        id: 5,
         title: "MauvalPrint Website",
         cardTitle: "MauvalPrint",
         subtitle: "Printing & Custom Products",
@@ -67,11 +72,12 @@ const myProjects = [
         badgeIcon: "fas fa-globe",
         description: "A modern web application built with robust performance and responsive design.",
         images: ["assets/images/gallery/maulprint1.png", "assets/images/gallery/maulprinta1.png"],
-        liveUrl: "https://farmely.qtechx.com/",
+        liveUrl: "https://mauvalprint.in/",
         delay: 300
     },
 
     {
+        id: 6,
         title: "Kavi’s Dry Fruits Website",
         cardTitle: "Kavi’s Dry Fruits Online Store",
         subtitle: "Dry Fruits & Nuts E-Commerce",
@@ -82,11 +88,12 @@ const myProjects = [
         badgeIcon: "fas fa-globe",
         description: "A modern web application built with robust performance and responsive design.",
         images: ["assets/images/gallery/kavis1.png", "assets/images/gallery/kavisa1.png"],
-        liveUrl: "https://farmely.qtechx.com/",
+        liveUrl: "https://kavisdryfruits.com/",
         delay: 200
     },
     
     {
+        id: 7,
         title: "Gold Shop Website",
         cardTitle: "Gold Shop Online Store",
         subtitle: "Gold Jewellery & E-Commerce",
@@ -100,12 +107,13 @@ const myProjects = [
             "assets/images/gallery/gold1.png",
             "assets/images/gallery/golda2.png"
         ],
-        liveUrl: "https://farmely.qtechx.com/",
+        liveUrl: "https://srigold.qtechx.com/",
         delay: 300
     },
 
  
    {
+       id: 8,
        title: "Photo Frame Collection Website",
        cardTitle: "Photo Frames, Gifts & Albums",
        subtitle: "Custom Photo Frames & Personalized Gifts",
@@ -126,6 +134,7 @@ const myProjects = [
        delay: 350
    },
    {
+       id: 9,
        title: "Supermarket & Grocery Delivery Website",
         cardTitle: "Supermarket Online Shopping",
         subtitle: "Supermarket & Grocery Delivery",
@@ -141,6 +150,7 @@ const myProjects = [
     },
 
     {
+        id: 10,
         title: "Feather VFX Studio Website",
         cardTitle: "Feather VFX Studio",
         subtitle: "Visual Effects & Creative Studio",
@@ -162,6 +172,7 @@ const myProjects = [
 },
 
 {
+        id: 11,
         title: "Ozone Industries Website",
         cardTitle: "Ozone Industries",
         subtitle: "Industrial Company Website",
@@ -177,6 +188,7 @@ const myProjects = [
     },
 
      {
+        id: 12,
         title: "Marutham Marketing – Petro Chemical Solutions",
         cardTitle: "Marutham Marketing",
         subtitle: "Petrochemical Products & Industrial Solutions",
@@ -200,6 +212,7 @@ const myProjects = [
     
     
     {
+        id: 13,
         title: "LifeTracking Web Application",
         cardTitle: "Life Ledger",
         subtitle: "Personal Finance & Life Tracking",
@@ -218,6 +231,7 @@ const myProjects = [
         delay: 250
     },
     {
+        id: 14,
         title: "Veetu Rusi Food Website",
         cardTitle: "Veetu Rusi Food Ordering",
         subtitle: "Food Ordering & Delivery",
@@ -239,6 +253,7 @@ const myProjects = [
     },
     
      {
+        id: 15,
         title: "Car Service – Booking & Management System",
         cardTitle: "Car Service Booking System",
         subtitle: "Vehicle Service Booking & Management",
@@ -257,6 +272,7 @@ const myProjects = [
     
     
     {
+        id: 16,
         title: "Babe’s World – E-Commerce Website",
         cardTitle: "Babe’s World Online Store",
         subtitle: "Fashion & Lifestyle E-Commerce",
@@ -271,6 +287,7 @@ const myProjects = [
         delay: 100
     },
     {
+        id: 17,
         title: "Formerly – Business Website",
         cardTitle: "Formerly Business Website",
         subtitle: "Business & Brand Website",
@@ -285,6 +302,7 @@ const myProjects = [
         delay: 400
     },
     {
+        id: 18,
         title: "Dental Hospital Management System",
         cardTitle: "Dental Hospital Management",
         subtitle: "Dental Clinic Website & Admin Dashboard",
@@ -298,6 +316,7 @@ const myProjects = [
         delay: 300
     },
     {
+        id: 19,
         title: "Learning Management Website",
         cardTitle: "Learning Management System",
         subtitle: "Online Learning & Course Management",
@@ -372,10 +391,87 @@ function renderProjectCard(project) {
 const projectGrid = document.getElementById("projectGrid");
 
 if (projectGrid) {
-    projectGrid.innerHTML = myProjects.concat(myApps).map(renderProjectCard).join("");
+    const projectsPerPage = 8;
+    const projects = myProjects.concat(typeof myApps === "undefined" ? [] : myApps);
+    const pageCount = Math.ceil(projects.length / projectsPerPage);
+    let currentPage = 1;
+    let pagination = document.getElementById("projectPagination");
+
+    if (!pagination && pageCount > 1) {
+        pagination = document.createElement("nav");
+        pagination.id = "projectPagination";
+        pagination.className = "project-pagination";
+        pagination.setAttribute("aria-label", "Project pages");
+        projectGrid.insertAdjacentElement("afterend", pagination);
+    }
+
+    function renderPagination() {
+        if (!pagination) {
+            return;
+        }
+
+        pagination.replaceChildren();
+
+        function addPageButton(label, page, options) {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "project-pagination-button";
+            button.textContent = label;
+            button.setAttribute("aria-label", options.ariaLabel);
+            button.disabled = options.disabled;
+
+            if (options.current) {
+                button.classList.add("is-active");
+                button.setAttribute("aria-current", "page");
+            }
+
+            button.addEventListener("click", function () {
+                if (page === currentPage || page < 1 || page > pageCount) {
+                    return;
+                }
+
+                currentPage = page;
+                renderProjects();
+            });
+
+            pagination.appendChild(button);
+        }
+
+        addPageButton("Previous", currentPage - 1, {
+            ariaLabel: "Go to previous page",
+            disabled: currentPage === 1
+        });
+
+        for (let page = 1; page <= pageCount; page += 1) {
+            addPageButton(String(page), page, {
+                ariaLabel: "Go to page " + page,
+                current: page === currentPage,
+                disabled: false
+            });
+        }
+
+        addPageButton("Next", currentPage + 1, {
+            ariaLabel: "Go to next page",
+            disabled: currentPage === pageCount
+        });
+    }
+
+    function renderProjects() {
+        const start = (currentPage - 1) * projectsPerPage;
+        projectGrid.innerHTML = projects
+            .slice(start, start + projectsPerPage)
+            .map(renderProjectCard)
+            .join("");
+        projectGrid.setAttribute("aria-label", "Projects, page " + currentPage + " of " + pageCount);
+        renderPagination();
+    }
+
+    renderProjects();
 
     document.querySelectorAll(".filter-count[data-count-category]").forEach(function (countElement) {
         const category = countElement.getAttribute("data-count-category");
-        countElement.textContent = projectGrid.querySelectorAll(".gallery_product." + category).length;
+        countElement.textContent = projects.filter(function (project) {
+            return (project.category === "mobile" ? "mobile" : "web") === category;
+        }).length;
     });
 }

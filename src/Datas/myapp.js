@@ -1,5 +1,6 @@
 const myApps = [
     {
+        id: 1,
         title: "Life Tracking App",
         cardTitle: "Life Ledger App",
         imageAlt: "Life Ledger personal tracking dashboard",
@@ -21,6 +22,7 @@ const myApps = [
         delay: 100
     },
     {
+        id: 2,
         title: "Kavi Dry Fruits App",
         cardTitle: "Kavi’s Dry Fruits",
         imageAlt: "Kavi’s Dry Fruits online store",
@@ -46,6 +48,7 @@ const myApps = [
     },
     
     {
+        id: 3,
         title: "Supermarket Shopping App",
         cardTitle: "Supermarket & Grocery App",
         imageAlt: "Supermarket and grocery shopping",
@@ -65,6 +68,7 @@ const myApps = [
         delay: 250
     },
     {
+        id: 4,
         title: "Supermarket Billing App",
         cardTitle: "Supermarket Billing App",
         imageAlt: "Supermarket billing and inventory dashboard",

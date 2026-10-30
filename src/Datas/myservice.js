@@ -1,5 +1,6 @@
 const myServices = [
     {
+        id: 1,
         number: "01",
         title: "Web Development",
         description: "Modern, responsive & SEO-friendly websites built with React.js and cutting-edge technologies.",
@@ -10,6 +11,7 @@ const myServices = [
         delay: 100
     },
     {
+        id: 2,
         number: "02",
         title: "Mobile App Development",
         description: "Cross-platform Android applications using React Native with high performance & native UX.",
@@ -20,6 +22,7 @@ const myServices = [
         delay: 150
     },
     {
+        id: 3,
         number: "03",
         title: "Full Stack Development",
         description: "Complete frontend, backend, database & API development for scalable, production-ready applications.",
@@ -30,6 +33,7 @@ const myServices = [
         delay: 200
     },
     {
+        id: 4,
         number: "04",
         title: "E-Commerce Solutions",
         description: "Online stores with secure authentication, payment gateways & complete order management systems.",
@@ -40,6 +44,7 @@ const myServices = [
         delay: 250
     },
     {
+        id: 5,
         number: "05",
         title: "Food Delivery Solutions",
         description: "Complete food ordering platforms with Admin, Home Chef, User & Delivery Partner modules.",
@@ -50,6 +55,7 @@ const myServices = [
         delay: 300
     },
     {
+        id: 6,
         number: "06",
         title: "API Integration",
         description: "Payment gateways, OTP, WhatsApp, SMS, email services & third-party API integrations.",
@@ -60,6 +66,7 @@ const myServices = [
         delay: 350
     },
     {
+        id: 7,
         number: "07",
         title: "Admin Dashboard",
         description: "Powerful dashboards with analytics, user management, reports & role-based access control.",
@@ -70,6 +77,7 @@ const myServices = [
         delay: 400
     },
     {
+        id: 8,
         number: "08",
         title: "Maintenance & Support",
         description: "Ongoing updates, bug fixes, performance optimization & dedicated technical support.",
