@@ -1,12 +1,12 @@
 import Hero from "../Hero/Hero.jsx";
-import AboutPreview from "../About/AboutPreview.jsx";
+import AboutFeatureSection from "../About/AboutFeatureSection.jsx";
 import TechnologyShowcase from "./TechnologyShowcase.jsx";
 
 function Home() {
   return (
     <>
       <Hero />
-      <AboutPreview />
+      <AboutFeatureSection />
       <TechnologyShowcase />
     </>
   );
