@@ -1,4 +1,5 @@
 import { Heart, Lightbulb, Rocket, Target } from "lucide-react";
+import PageContainer from "../../../CommenComponets/PageContainer.jsx";
 
 const principles = [
   {
@@ -33,7 +34,7 @@ const principles = [
 
 function AboutPrinciples() {
   return (
-    <div className="about-principles-shell">
+    <PageContainer fullWidth className="about-principles-shell">
       <div className="about-principles">
         {principles.map(({ number, title, description, icon: Icon, accent }) => (
           <article className={`about-principle about-principle-${accent}`} key={number}>
@@ -45,7 +46,7 @@ function AboutPrinciples() {
           </article>
         ))}
       </div>
-    </div>
+    </PageContainer>
   );
 }
 

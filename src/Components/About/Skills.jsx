@@ -1,4 +1,5 @@
 import { Code2, Database, GitBranch, Layers3, Server } from "lucide-react";
+import PageContainer from "../../CommenComponets/PageContainer.jsx";
 
 const skillGroups = [
   {
@@ -25,7 +26,7 @@ function Skills() {
       <div className="skills-noise" />
       <div className="skills-orb skills-orb-one" />
       <div className="skills-orb skills-orb-two" />
-      <div className="skills-shell">
+      <PageContainer fullWidth className="skills-shell">
         <div className="skills-intro">
           <div className="skills-intro-copy">
             <p className="skills-overline"><span /> CAPABILITIES</p>
@@ -60,7 +61,7 @@ function Skills() {
             </article>
           ))}
         </div>
-      </div>
+      </PageContainer>
     </section>
   );
 }

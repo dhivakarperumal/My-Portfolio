@@ -25,6 +25,7 @@ import {
 import SkillCategoryCard from "./components/SkillCategoryCard.jsx";
 import TechnologyOrbit from "./components/TechnologyOrbit.jsx";
 import TechnologyStats from "./components/TechnologyStats.jsx";
+import PageContainer from "../../CommenComponets/PageContainer.jsx";
 import "./TechnologyShowcase.css";
 
 const categories = [
@@ -109,7 +110,7 @@ function TechnologyShowcase() {
       <div className="technology-showcase-glow technology-showcase-glow-left" aria-hidden="true" />
       <div className="technology-showcase-glow technology-showcase-glow-right" aria-hidden="true" />
 
-      <div className="technology-showcase-shell">
+      <PageContainer fullWidth className="technology-showcase-shell">
         <header className="technology-showcase-heading">
           <p className="technology-showcase-eyebrow"><Sparkles size={14} /> MY SKILLS <Sparkles size={14} /></p>
           <h2 id="technology-title">Technologies <span>I Work With</span></h2>
@@ -127,7 +128,7 @@ function TechnologyShowcase() {
         </div>
 
         <TechnologyStats />
-      </div>
+      </PageContainer>
     </section>
   );
 }

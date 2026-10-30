@@ -2,7 +2,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: 64px 28px 30px;
+  padding: 64px 0 30px;
   background:
     radial-gradient(ellipse at 50% 45%, rgba(12, 19, 40, .78), transparent 60%),
     #050816;
@@ -45,8 +45,8 @@
 }
 
 .technology-showcase-shell {
-  width: min(100%, 1480px);
-  margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .technology-showcase-heading {
@@ -437,7 +437,7 @@
 
 @media (max-width: 700px) {
   .technology-showcase {
-    padding: 58px 18px 24px;
+    padding: 58px 0 24px;
   }
 
   .technology-showcase-layout {
@@ -506,7 +506,7 @@
 
 @media (max-width: 420px) {
   .technology-showcase {
-    padding-inline: 12px;
+    padding-inline: 0;
   }
 
   .technology-heading-break {

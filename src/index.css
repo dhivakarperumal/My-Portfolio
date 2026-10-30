@@ -1558,7 +1558,7 @@ img {
 .skills-section {
   position: relative;
   overflow: hidden;
-  padding: 82px 20px 104px;
+  padding: 82px 0 104px;
   background: #070b18;
   isolation: isolate;
 }
@@ -1566,8 +1566,6 @@ img {
 .skills-shell {
   position: relative;
   z-index: 1;
-  width: min(100%, 1120px);
-  margin: auto;
 }
 
 .skills-noise {
@@ -1642,7 +1640,7 @@ img {
 }
 
 @media (max-width: 480px) {
-  .skills-section { padding: 64px 14px 76px; }
+  .skills-section { padding: 64px 0 76px; }
   .skills-panel { padding: 22px 18px; }
   .skills-intro { margin-bottom: 30px; }
 }

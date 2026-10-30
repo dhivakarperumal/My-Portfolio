@@ -10,22 +10,24 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: 48px 28px 28px;
+  padding-block: 48px 28px;
   background:
     radial-gradient(ellipse at 68% 47%, rgba(12, 24, 50, .5), transparent 56%),
     #050816;
+}
+
+.about-hero-container {
+  position: relative;
 }
 
 .about-hero-shell {
   position: relative;
   z-index: 1;
   display: grid;
-  width: min(100%, 1360px);
   min-height: 435px;
   grid-template-columns: minmax(310px, .75fr) minmax(0, 1.45fr);
   align-items: center;
   gap: clamp(36px, 5vw, 78px);
-  margin: 0 auto;
 }
 
 .about-hero-corner {
@@ -55,7 +57,7 @@
 .about-hero-dots {
   position: absolute;
   top: 34px;
-  right: max(5%, calc((100vw - 1360px) / 2));
+  right: 6%;
   width: 100px;
   height: 130px;
   opacity: .7;
@@ -330,7 +332,7 @@
 
 .about-hero-signature {
   position: absolute;
-  right: max(2%, calc((100vw - 1450px) / 2));
+  right: 3%;
   bottom: 24px;
   color: #e2e8f0;
   font: italic 1.1rem/1.2 "Space Grotesk", cursive;
@@ -351,8 +353,6 @@
 .about-principles-shell {
   position: relative;
   z-index: 1;
-  width: min(100% - 56px, 1360px);
-  margin: 0 auto;
   padding-bottom: 54px;
 }
 
@@ -450,7 +450,7 @@
 
 @media (max-width: 700px) {
   .about-hero {
-    padding: 36px 20px 24px;
+    padding-block: 36px 24px;
   }
 
   .about-hero-shell {
@@ -530,7 +530,6 @@
   }
 
   .about-principles-shell {
-    width: min(100% - 40px, 520px);
     padding-bottom: 42px;
   }
 
@@ -550,7 +549,7 @@
 
 @media (max-width: 420px) {
   .about-hero {
-    padding-inline: 14px;
+    padding-inline: 0;
   }
 
   .about-hero-stats {
@@ -563,10 +562,6 @@
 
   .about-hero-actions a {
     font-size: .7rem;
-  }
-
-  .about-principles-shell {
-    width: calc(100% - 28px);
   }
 
   .about-principles {
