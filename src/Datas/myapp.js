@@ -1,12 +1,13 @@
-const myApps = [
+export const myApps = [
     {
         id: 1,
         title: "Life Tracking App",
-        cardTitle: "Life Ledger App",
+        cardTitle: "Life Ledger",
         imageAlt: "Life Ledger personal tracking dashboard",
-        subtitle: "Personal Finance, Diary & Memories",
+        subtitle: "Personal Finance Tracker",
         projectSub: "MobileApp · Personal Life Tracking",
         technology: "React Native",
+        cardTechnologies: ["React Native", "Expo", "AsyncStorage"],
         liveUrl: "https://lifetracking.qtechx.com/",
         category: "mobile",
         badge: "Mobile App",
@@ -254,3 +255,5 @@ const myApps = [
         delay: 300
     },
 ];
+
+export default myApps;
