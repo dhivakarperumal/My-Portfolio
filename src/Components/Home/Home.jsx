@@ -1,7 +1,10 @@
 import Hero from "../Hero/Hero.jsx";
 import AboutFeatureSection from "../About/AboutFeatureSection.jsx";
+import Experience from "../Experience/Experience.jsx";
+import ServicesSection from "./ServicesSection.jsx";
+import ProjectsSection from "./ProjectsSection.jsx";
 import TechnologyShowcase from "./TechnologyShowcase.jsx";
-import ProjectsSection from "../Projects/ProjectsSection.jsx";
+import ContactSection from "./ContactSection.jsx";
 
 function Home() {
   return (
@@ -9,7 +12,10 @@ function Home() {
       <Hero />
       <AboutFeatureSection />
       <TechnologyShowcase />
+      <Experience />
       <ProjectsSection />
+      <ServicesSection />
+      <ContactSection />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { ArrowRight, BriefcaseBusiness, Code2, Download, Heart, Mail, Users } from "lucide-react";
+import { BriefcaseBusiness, Code2, Download, Heart, Mail, Users } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../../../public/Images/tab.png";
@@ -37,10 +37,7 @@ function Hero() {
           </p>
 
           <div className="hero-actions">
-            <Link to="/projects" className="hero-primary-button">
-              View My Projects <ArrowRight size={18} />
-            </Link>
-            <Link to="/contact" className="hero-secondary-button">
+            <Link to="/contact" className="hero-primary-button">
               <Mail size={17} /> Contact Me
             </Link>
           </div>
@@ -48,8 +45,8 @@ function Hero() {
           <div className="hero-socials" aria-label="Social links">
             <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
             <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
-            <a href="https://wa.me/918950678907" target="_blank" rel="noreferrer" aria-label="WhatsApp"><FaWhatsapp /></a>
-            <a href="mailto:hello@dhivakar.dev" aria-label="Email"><Mail size={18} /></a>
+            <a href="https://wa.me/918940450960" target="_blank" rel="noreferrer" aria-label="WhatsApp"><FaWhatsapp /></a>
+            <a href="mailto:dhivakarp305@gmail.com" aria-label="Email"><Mail size={18} /></a>
           </div>
         </div>
 

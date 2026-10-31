@@ -20,7 +20,7 @@ const Header = () => {
           {/* Left - Contact */}
           <div className="flex items-center gap-1.5 md:gap-2">
             <Phone size={14} className="md:w-[15px] md:h-[15px]" />
-            <span>+91 89506 78907</span>
+            <span>+91 8940450960</span>
           </div>
 
           {/* Center - Marquee Offers */}

@@ -8,7 +8,6 @@ import PageContainer from "./PageContainer";
 const quickLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  { to: "/projects", label: "Projects" },
   { to: "/experience", label: "Experience" },
   { to: "/contact", label: "Contact" },
 ];
@@ -102,8 +101,8 @@ function Footer() {
             <ul className="portfolio-social-links">
               <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer"><FaLinkedinIn size={22} /> LinkedIn</a></li>
               <li><a href="https://github.com" target="_blank" rel="noreferrer"><FaGithub size={22} /> GitHub</a></li>
-              <li><a href="https://wa.me/918950678907" target="_blank" rel="noreferrer"><FaWhatsapp size={22} /> WhatsApp</a></li>
-              <li><a href="mailto:hello@dhivakar.dev"><Mail size={22} /> Email</a></li>
+              <li><a href="https://wa.me/918940450960" target="_blank" rel="noreferrer"><FaWhatsapp size={22} /> WhatsApp</a></li>
+              <li><a href="mailto:dhivakarp305@gmail.com"><Mail size={22} /> Email</a></li>
             </ul>
           </div>
         </section>

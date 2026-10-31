@@ -6,8 +6,8 @@ import PageContainer from "./PageContainer";
 const socialLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com", icon: FaLinkedinIn, className: "top-header-linkedin" },
   { label: "GitHub", href: "https://github.com", icon: FaGithub, className: "top-header-github" },
-  { label: "WhatsApp", href: "https://wa.me/918950678907", icon: FaWhatsapp, className: "top-header-whatsapp" },
-  { label: "Email", href: "mailto:hello@dhivakar.dev", icon: Mail, className: "top-header-email" },
+  { label: "WhatsApp", href: "https://wa.me/918940450960", icon: FaWhatsapp, className: "top-header-whatsapp" },
+  { label: "Email", href: "mailto:dhivakarp305@gmail.com", icon: Mail, className: "top-header-email" },
 ];
 
 function TopHeader() {
@@ -20,13 +20,13 @@ function TopHeader() {
     >
       <PageContainer fullWidth className="top-header-inner">
         <div className="top-header-contact">
-          <a href="tel:+919876543210">
+          <a href="tel:+918940450960">
             <span className="top-header-icon"><Phone size={17} /></span>
-            <span><small>Call Me</small><strong>+91 98765 43210</strong></span>
+            <span><small>Call Me</small><strong>+91 8940450960</strong></span>
           </a>
-          <a href="mailto:dhivakar@gmail.com">
+          <a href="mailto:dhivakarp305@gmail.com">
             <span className="top-header-icon"><Mail size={17} /></span>
-            <span><small>Email Me</small><strong>dhivakar@gmail.com</strong></span>
+            <span><small>Email Me</small><strong>dhivakarp305@gmail.com</strong></span>
           </a>
           <span className="top-header-location">
             <span className="top-header-icon"><MapPin size={17} /></span>
@@ -42,7 +42,7 @@ function TopHeader() {
               </a>
             ))}
           </div>
-          <a className="top-header-hire" href="mailto:hello@dhivakar.dev">
+          <a className="top-header-hire" href="mailto:dhivakarp305@gmail.com">
             Hire Me <Send size={16} />
           </a>
         </div>

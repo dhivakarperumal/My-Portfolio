@@ -40,7 +40,7 @@ function AboutPreview() {
               <strong>Let&apos;s connect</strong>
               <a href="tel:+918940450960"><Phone size={15} /> +91 8940450960</a>
               <a href="mailto:dhivakarp305@gmail.com"><Mail size={15} /> dhivakarp305@gmail.com</a>
-              <a href="https://wa.me/+918940450960?text=Hello%20there!" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/918940450960?text=Hello%20there!" target="_blank" rel="noreferrer">
                 <MessageCircle size={15} /> Chat With Us
               </a>
             </div>
@@ -83,7 +83,7 @@ function AboutPreview() {
             <Link to="/about" className="about-preview-primary">
               Discover More <ArrowRight size={17} />
             </Link>
-            <a href="https://wa.me/+918940450960?text=Hello%20there!" target="_blank" rel="noreferrer" className="about-preview-whatsapp">
+            <a href="https://wa.me/918940450960?text=Hello%20there!" target="_blank" rel="noreferrer" className="about-preview-whatsapp">
               <Phone size={16} /> Chat With Us
             </a>
           </div>
