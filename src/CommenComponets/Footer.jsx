@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUp, Mail, Send } from "lucide-react";
+import { ArrowUp, Mail, MapPin, Send } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../../public/Images/tab.png";
@@ -18,6 +18,8 @@ const services = [
   "Backend Development",
   "UI/UX Design",
 ];
+
+const contactAddress = "122 Sollaikkolaimedu, Asanambattu Road, Nayakkaneri Post, Ambur Tk, Tirupathur Dist 635802";
 
 function Footer() {
   const [email, setEmail] = useState("");
@@ -78,6 +80,15 @@ function Footer() {
               </span>
             </Link>
             <p>Building modern web and mobile applications with passion and technology.</p>
+            <a
+              className="portfolio-footer-address"
+              href={`https://maps.google.com/?q=${encodeURIComponent(contactAddress)}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MapPin size={17} />
+              <span>{contactAddress}</span>
+            </a>
           </div>
 
           <div>

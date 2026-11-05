@@ -253,6 +253,16 @@ img {
   font-weight: 600;
 }
 
+.top-header-location strong {
+  max-width: 205px;
+  white-space: normal;
+  line-height: 1.35;
+}
+
+.top-header-inner {
+  min-height: 56px;
+}
+
 .top-header-actions {
   position: relative;
   z-index: 1;
@@ -708,6 +718,12 @@ img {
   font-size: 0.68rem;
 }
 
+.about-preview-address strong {
+  overflow: visible;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
 .about-preview-actions {
   align-items: center;
 }
@@ -989,6 +1005,11 @@ img {
   color: #64727c;
   font-size: 0.92rem;
   text-align: right;
+}
+
+.about-preview-address strong {
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .about-preview-email strong {
@@ -2063,6 +2084,24 @@ img {
   max-width: 350px;
   margin-top: 22px;
   line-height: 1.8;
+}
+
+.portfolio-footer-address {
+  display: flex;
+  max-width: 360px;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 12px;
+  color: var(--text-secondary);
+  font-size: .75rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.portfolio-footer-address svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: var(--accent);
 }
 
 .portfolio-footer-logo {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Download, Menu, Moon, Sun, X } from "lucide-react";
 import logo from "../../public/Images/tab.png";
 import PageContainer from "./PageContainer";
@@ -9,6 +9,7 @@ const navLinks = [
   { to: "/about", label: "About" },
   { to: "/skills", label: "Skills" },
   { to: "/services", label: "Services" },
+  { to: "/#projects", label: "Projects" },
   { to: "/experience", label: "Experience" },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
@@ -17,6 +18,7 @@ const navLinks = [
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLight, setIsLight] = useState(false);
+  const location = useLocation();
 
   const toggleTheme = () => {
     const nextIsLight = !isLight;
@@ -54,18 +56,28 @@ function Navbar() {
               to={link.to}
               className={({ isActive }) =>
                 `portfolio-navbar-link relative py-2 text-[13px] font-semibold transition-colors ${
-                isActive ? "portfolio-navbar-link-active" : ""
+                (link.to === "/#projects"
+                  ? location.hash === "#projects"
+                  : isActive && !(link.to === "/" && location.hash === "#projects"))
+                  ? "portfolio-navbar-link-active"
+                  : ""
                 }`
               }
             >
-              {({ isActive }) => (
-                <>
-                  {link.label}
-                  {isActive && (
-                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-fuchsia-500 shadow-[0_0_8px_#d946ef]" />
-                  )}
-                </>
-              )}
+              {({ isActive }) => {
+                const linkIsActive = link.to === "/#projects"
+                  ? location.hash === "#projects"
+                  : isActive && !(link.to === "/" && location.hash === "#projects");
+
+                return (
+                  <>
+                    {link.label}
+                    {linkIsActive && (
+                      <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-fuchsia-500 shadow-[0_0_8px_#d946ef]" />
+                    )}
+                  </>
+                );
+              }}
             </NavLink>
           ))}
         </div>

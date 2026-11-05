@@ -36,7 +36,7 @@ const contactDetails = [
   },
   {
     title: "Location",
-    value: "Tamil Nadu, India",
+    value: "122 Sollaikkolaimedu, Asanambattu Road, Nayakkaneri Post, Ambur Tk, Tirupathur Dist 635802",
     note: "Available for remote work",
     icon: MapPin,
     accent: "blue",
@@ -126,14 +126,14 @@ function ContactSection() {
 
                 return href ? (
                   <a
-                    className={`contact-detail-card is-${accent}`}
+                    className={`contact-detail-card is-${accent}${title === "Location" ? " is-location" : ""}`}
                     href={href}
                     key={title}
                   >
                     {content}
                   </a>
                 ) : (
-                  <div className={`contact-detail-card is-${accent}`} key={title}>
+                  <div className={`contact-detail-card is-${accent}${title === "Location" ? " is-location" : ""}`} key={title}>
                     {content}
                   </div>
                 );

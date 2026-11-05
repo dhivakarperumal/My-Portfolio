@@ -6,7 +6,7 @@ import PageContainer from "../../CommenComponets/PageContainer";
 
 const personalDetails = [
   { label: "Birthday", value: "30 May 2000", icon: Cake },
-  { label: "City", value: "Tirupathur", icon: MapPin },
+  { label: "Address", value: "122 Sollaikkolaimedu, Asanambattu Road, Nayakkaneri Post, Ambur Tk, Tirupathur Dist 635802", icon: MapPin },
   { label: "Study", value: "Anna University", icon: GraduationCap },
   { label: "Age", value: "24 Years", icon: Cake },
   { label: "Degree", value: "MCA", icon: GraduationCap },
@@ -69,7 +69,7 @@ function AboutPreview() {
           </p>
           <div className="about-preview-details">
             {personalDetails.map(({ label, value, icon: Icon }) => (
-              <div className="about-preview-detail" key={label}>
+              <div className={`about-preview-detail${label === "Address" ? " about-preview-address" : ""}`} key={label}>
                 <Icon size={15} />
                 <span><small>{label}</small><strong>{value}</strong></span>
               </div>

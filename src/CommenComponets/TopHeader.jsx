@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, Phone, Send } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 import PageContainer from "./PageContainer";
@@ -28,10 +28,6 @@ function TopHeader() {
             <span className="top-header-icon"><Mail size={17} /></span>
             <span><small>Email Me</small><strong>dhivakarp305@gmail.com</strong></span>
           </a>
-          <span className="top-header-location">
-            <span className="top-header-icon"><MapPin size={17} /></span>
-            <span><small>Location</small><strong>Chennai, Tamil Nadu</strong></span>
-          </span>
         </div>
 
         <div className="top-header-actions">

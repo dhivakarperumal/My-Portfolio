@@ -99,7 +99,7 @@ function ProjectsSection() {
   }, [activeFilter, showAll]);
 
   return (
-    <section className="projects-showcase" aria-labelledby="projects-title">
+    <section id="projects" className="projects-showcase" aria-labelledby="projects-title">
       <div className="projects-showcase-grid" aria-hidden="true" />
       <div className="projects-showcase-glow projects-showcase-glow-left" aria-hidden="true" />
       <div className="projects-showcase-glow projects-showcase-glow-right" aria-hidden="true" />
