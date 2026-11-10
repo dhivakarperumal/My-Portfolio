@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import {
   ArrowRight,
-  ExternalLink,
+  ArrowUpRight,
   Grid2X2,
   Layers3,
   Monitor,
@@ -42,7 +42,7 @@ function makeProjectCard(project, type, index) {
     imageAlt: project.imageAlt || project.cardTitle || project.title,
     technologies,
     url: project.playStoreUrl || project.liveUrl,
-    description: project.description,
+    description: project.description || "A modern web and mobile application built with high performance and responsive design.",
   };
 }
 
@@ -146,43 +146,106 @@ function ProjectsSection() {
               key={project.id}
               style={{ "--project-index": index }}
             >
-              <div className="project-card-image">
+              {/* Image & Media Container */}
+              <div className="project-card-media">
                 <img
                   src={project.image}
                   alt={project.imageAlt}
                   loading={index > 3 ? "lazy" : "eager"}
                   onError={(event) => {
-                    event.currentTarget.hidden = true;
+                    event.currentTarget.style.display = "none";
                   }}
                 />
-                <span className="project-type-badge">
-                  {project.type === "mobile" ? "React Native" : "React"}
-                </span>
-              </div>
-              <div className="project-card-info">
-                <div className="project-card-title-row">
-                  <span className="project-card-icon" aria-hidden="true">
-                    {project.type === "mobile" ? <Smartphone size={17} /> : <Layers3 size={17} />}
+
+                {/* Floating Badges */}
+                <div className="project-card-badges">
+                  <span className="project-badge-pill">
+                    {project.type === "mobile" ? (
+                      <>
+                        <Smartphone size={13} className="project-badge-icon-mobile" />
+                        <span>Mobile App</span>
+                      </>
+                    ) : (
+                      <>
+                        <Monitor size={13} className="project-badge-icon-web" />
+                        <span>Web App</span>
+                      </>
+                    )}
                   </span>
-                  <div className="project-card-titles">
-                    <h3>{project.title}</h3>
-                    <p>{project.subtitle}</p>
+
+                  {project.url && (
+                    <span className="project-live-pill">
+                      <span className="project-live-dot" />
+                      Live
+                    </span>
+                  )}
+                </div>
+
+                {/* Hover Overlay Button */}
+                {project.url && (
+                  <div className="project-card-hover-overlay">
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-hover-btn"
+                    >
+                      <span>{project.type === "mobile" ? "View App" : "View Live Site"}</span>
+                      <ArrowUpRight size={15} />
+                    </a>
                   </div>
+                )}
+              </div>
+
+              {/* Card Content Body */}
+              <div className="project-card-body">
+                <div className="project-card-main">
+                  {project.subtitle && (
+                    <span className="project-card-category">
+                      {project.subtitle}
+                    </span>
+                  )}
+
+                  <h3 className="project-card-title">
+                    {project.title}
+                  </h3>
+
+                  {project.description && (
+                    <p className="project-card-desc">
+                      {project.description}
+                    </p>
+                  )}
+
+                  <ul className="project-card-tags">
+                    {project.technologies.slice(0, 4).map((tech) => (
+                      <li key={tech}>{tech}</li>
+                    ))}
+                    {project.technologies.length > 4 && (
+                      <li className="project-tag-more">
+                        +{project.technologies.length - 4}
+                      </li>
+                    )}
+                  </ul>
+                </div>
+
+                {/* Card Action Footer */}
+                <div className="project-card-footer">
                   <a
-                    className="project-card-link"
+                    className="project-footer-link"
                     href={project.url || "/contact"}
                     target={project.url ? "_blank" : undefined}
                     rel={project.url ? "noreferrer" : undefined}
-                    aria-label={`${project.url ? "Open" : "Ask about"} ${project.title}`}
+                    aria-label={`${project.url ? "Open" : "Contact about"} ${project.title}`}
                   >
-                    <ExternalLink size={16} />
+                    <span>{project.url ? (project.type === "mobile" ? "Get App" : "Live Demo") : "Details"}</span>
+                    <ArrowUpRight size={16} className="project-link-arrow" />
                   </a>
+
+                  <span className="project-footer-type">
+                    {project.type === "mobile" ? <Smartphone size={14} /> : <Monitor size={14} />}
+                    <span>{project.type === "mobile" ? "React Native" : "Web"}</span>
+                  </span>
                 </div>
-                <ul className="project-card-technologies">
-                  {project.technologies.slice(0, 3).map((technology) => (
-                    <li key={technology}>{technology}</li>
-                  ))}
-                </ul>
               </div>
             </article>
           ))}

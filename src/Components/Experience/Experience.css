@@ -442,6 +442,10 @@
   box-shadow: 0 12px 30px rgba(15, 23, 42, .07);
 }
 
+[data-theme="light"] .experience-tags li.is-slate {
+  --tag-color: #475569;
+}
+
 @media (max-width: 900px) {
   .experience-layout {
     grid-template-columns: minmax(0, 1fr);

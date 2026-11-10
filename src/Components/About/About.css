@@ -572,3 +572,93 @@
     min-height: 190px;
   }
 }
+
+[data-theme="light"] .about-section {
+  background: #f8fafc;
+  color: #111827;
+}
+
+[data-theme="light"] .about-hero {
+  background:
+    radial-gradient(ellipse at 68% 47%, rgba(251, 146, 60, .12), transparent 56%),
+    #f8fafc;
+}
+
+[data-theme="light"] .about-portrait {
+  background: radial-gradient(circle, rgba(255, 255, 255, .72), rgba(241, 245, 249, .96));
+}
+
+[data-theme="light"] .about-portrait img {
+  mix-blend-mode: normal;
+}
+
+[data-theme="light"] .about-portrait-experience {
+  background: linear-gradient(135deg, rgba(255, 255, 255, .98), rgba(248, 250, 252, .98));
+  box-shadow: 0 10px 24px rgba(15, 23, 42, .12);
+}
+
+[data-theme="light"] .about-portrait-experience small,
+[data-theme="light"] .about-hero-description,
+[data-theme="light"] .about-hero-stat > small,
+[data-theme="light"] .about-principle p {
+  color: #475569;
+}
+
+[data-theme="light"] .about-hero-eyebrow {
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(100deg, #f97316, #a855f7) border-box;
+  color: #334155;
+}
+
+[data-theme="light"] .about-hero-content h2 {
+  color: #475569;
+}
+
+[data-theme="light"] .about-hero-description b {
+  color: #1e293b;
+}
+
+[data-theme="light"] .about-hero-stat {
+  border-color: color-mix(in srgb, var(--stat-color) 28%, #e2e8f0);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--stat-color) 5%, #fff), #fff);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, .06);
+}
+
+[data-theme="light"] .about-hero-stat > span {
+  background: color-mix(in srgb, var(--stat-color) 10%, #fff);
+}
+
+[data-theme="light"] .about-hero-actions a {
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+[data-theme="light"] .about-hero-actions .about-hero-resume {
+  border-color: transparent;
+  color: #fff;
+}
+
+[data-theme="light"] .about-hero-actions .about-hero-linkedin {
+  border-color: #7c3aed;
+}
+
+[data-theme="light"] .about-hero-signature {
+  color: #334155;
+}
+
+[data-theme="light"] .about-principle {
+  border-color: color-mix(in srgb, var(--principle-color) 28%, #e2e8f0);
+  background:
+    linear-gradient(140deg, color-mix(in srgb, var(--principle-color) 5%, transparent), transparent 53%),
+    linear-gradient(145deg, #fff, #f8fafc);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, .06);
+}
+
+[data-theme="light"] .about-principle-number {
+  color: color-mix(in srgb, var(--principle-color) 24%, #64748b);
+}
+
+[data-theme="light"] .about-principle-icon {
+  background: color-mix(in srgb, var(--principle-color) 10%, #fff);
+}
