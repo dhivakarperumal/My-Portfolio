@@ -565,6 +565,10 @@ a.contact-detail-card:hover {
 [data-theme="light"] .contact-field input,
 [data-theme="light"] .contact-field select,
 [data-theme="light"] .contact-field textarea { color: #111827; }
+[data-theme="light"] .contact-field > svg { color: #64748b; }
+[data-theme="light"] .contact-field input::placeholder,
+[data-theme="light"] .contact-field textarea::placeholder,
+[data-theme="light"] .contact-field select:not(:valid) { color: #64748b; }
 [data-theme="light"] .contact-field select option { background: #fff; color: #111827; }
 [data-theme="light"] .contact-trust-item strong { color: #334155; }
 [data-theme="light"] .contact-character-count,

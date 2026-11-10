@@ -2168,6 +2168,41 @@ img {
 .hero-experience-badge strong { font-size: .94rem; }
 .hero-experience-badge small { margin-top: 3px; color: #b8bdc9; font-size: .75rem; }
 
+[data-theme="light"] .hero-description {
+  color: #475569;
+}
+
+[data-theme="light"] .hero-description strong {
+  color: #1e293b;
+}
+
+[data-theme="light"] .hero-stat strong {
+  color: #111827;
+}
+
+[data-theme="light"] .hero-stat span,
+[data-theme="light"] .hero-socials > span {
+  color: #475569;
+}
+
+[data-theme="light"] .hero-stat {
+  border-right-color: rgba(71, 85, 105, .22);
+}
+
+[data-theme="light"] .hero-eyebrow {
+  border-color: #cbd5e1;
+  background: rgba(255, 255, 255, .86);
+  color: #334155;
+}
+
+[data-theme="light"] .hero-secondary-button {
+  color: #f8fafc;
+}
+
+[data-theme="light"] .hero-profile-note {
+  color: #7c2d12;
+}
+
 @media (max-width: 1000px) {
   .hero-content {
     min-height: 0;

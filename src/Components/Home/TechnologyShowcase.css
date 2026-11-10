@@ -452,7 +452,11 @@
 }
 
 [data-theme="light"] .technology-category-copy h3 span {
-  color: color-mix(in srgb, var(--category-accent) 78%, #334155);
+  color: color-mix(in srgb, var(--category-accent) 65%, #111827);
+}
+
+[data-theme="light"] .technology-category-number {
+  color: color-mix(in srgb, var(--category-accent) 65%, #111827);
 }
 
 [data-theme="light"] .technology-category-copy p {
