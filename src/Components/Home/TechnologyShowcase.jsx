@@ -105,7 +105,7 @@ const categories = [
 
 function TechnologyShowcase() {
   return (
-    <section className="technology-showcase" aria-labelledby="technology-title">
+    <section id="skills" className="technology-showcase" aria-labelledby="technology-title">
       <div className="technology-showcase-grid" aria-hidden="true" />
       <div className="technology-showcase-glow technology-showcase-glow-left" aria-hidden="true" />
       <div className="technology-showcase-glow technology-showcase-glow-right" aria-hidden="true" />

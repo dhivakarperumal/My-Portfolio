@@ -16,6 +16,7 @@ const FloatingActions = () => {
   return (
     <>
       <div
+        className="floating-actions-container"
         style={{
           position: "fixed",
           right: 0,

@@ -5,7 +5,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../../../public/Images/tab.png";
+import logo from "../../../public/Images/photo.jpg";
 import PageContainer from "../../CommenComponets/PageContainer";
 import Skills from "./Skills";
 

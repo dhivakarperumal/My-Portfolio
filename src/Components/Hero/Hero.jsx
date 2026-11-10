@@ -1,13 +1,24 @@
 import { ArrowRight, BriefcaseBusiness, Code2, Heart, Mail, Users } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import {
+  SiExpress,
+  SiJavascript,
+  SiMongodb,
+  SiMysql,
+  SiNodedotjs,
+  SiReact,
+} from "react-icons/si";
 import { Link } from "react-router-dom";
-import logo from "../../../public/Images/tab.png";
+import logo from "../../../public/Images/photo.jpg";
 
 const technologies = [
-  { label: "React", icon: "R", className: "hero-tech-react" },
-  { label: "Node.js", icon: "JS", className: "hero-tech-node" },
-  { label: "React Native", icon: "RN", className: "hero-tech-native" },
-  { label: "MySQL", icon: "DB", className: "hero-tech-mysql" },
+  { label: "React", icon: SiReact, color: "#61dafb", className: "hero-tech-react" },
+  { label: "JavaScript", icon: SiJavascript, color: "#f7df1e", className: "hero-tech-javascript" },
+  { label: "Express.js", icon: SiExpress, color: "#f8fafc", className: "hero-tech-express" },
+  { label: "Node.js", icon: SiNodedotjs, color: "#83cd29", className: "hero-tech-node" },
+  { label: "React Native", icon: SiReact, color: "#61dafb", className: "hero-tech-native" },
+  { label: "MongoDB", icon: SiMongodb, color: "#20c968", className: "hero-tech-mongodb" },
+  { label: "MySQL", icon: SiMysql, color: "#00a4e4", className: "hero-tech-mysql" },
 ];
 
 const stats = [
@@ -65,17 +76,17 @@ function Hero() {
           <div className="hero-orbit hero-orbit-two" aria-hidden="true" />
           <div className="hero-profile">
             <div className="hero-profile-glow" aria-hidden="true" />
-            <img src={logo} alt="Dhivakar P brand logo" />
+            <img src={logo} alt="Dhivakar P" />
           </div>
           <div className="hero-profile-caption">
             <Code2 size={26} aria-hidden="true" />
             <span><strong>Clean Code</strong><small>Modern Solutions</small></span>
           </div>
           <p className="hero-profile-note">Turning Ideas into<br />Real Products</p>
-          {technologies.map((technology) => (
-            <div className={`hero-tech-card ${technology.className}`} key={technology.label}>
-              <strong>{technology.icon}</strong>
-              <span>{technology.label}</span>
+          {technologies.map(({ label, icon: Icon, color, className }) => (
+            <div className={`hero-tech-card ${className}`} key={label}>
+              <strong><Icon size={20} style={{ color }} aria-hidden="true" /></strong>
+              <span>{label}</span>
             </div>
           ))}
           <div className="hero-experience-badge">

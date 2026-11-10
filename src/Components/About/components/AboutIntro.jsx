@@ -7,7 +7,7 @@ import {
   Zap,
 } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import logo from "../../../../public/Images/tab.png";
+import logo from "../../../../public/Images/photo.jpg";
 import PageContainer from "../../../CommenComponets/PageContainer.jsx";
 
 const highlights = [
@@ -31,7 +31,7 @@ function AboutIntro() {
             <div className="about-portrait-glow" aria-hidden="true" />
             <span className="about-portrait-note">Build<br />Develop<br />Innovate</span>
             <div className="about-portrait">
-              <img src={logo} alt="Dhivakar P personal logo" />
+              <img src={logo} alt="Dhivakar P" />
             </div>
             <div className="about-portrait-experience">
               <span><BriefcaseBusiness size={19} /></span>

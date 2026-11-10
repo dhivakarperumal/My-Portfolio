@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowRight, CheckCircle2, Download, Mail, MapPin, Phone, GraduationCap, Cake, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../../../public/Images/tab.png";
+import logo from "../../../public/Images/photo.jpg";
 import PageContainer from "../../CommenComponets/PageContainer";
 
 const personalDetails = [

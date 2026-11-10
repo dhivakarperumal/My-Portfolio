@@ -117,7 +117,7 @@ const process = [
 
 function ServicesSection() {
   return (
-    <section className="services-section" aria-labelledby="services-title">
+    <section id="services" className="services-section" aria-labelledby="services-title">
       <div className="services-decoration services-decoration-left" aria-hidden="true" />
       <div className="services-decoration services-decoration-right" aria-hidden="true" />
       <div className="services-dots services-dots-left" aria-hidden="true" />
