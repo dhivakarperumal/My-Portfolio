@@ -116,9 +116,25 @@ function Navbar() {
     };
   }, []);
 
-  const handleLinkClick = (href) => {
+  const handleLinkClick = (event, href) => {
     closeMobileMenu();
     setActiveLink(href);
+
+    const target = document.getElementById(href.slice(1));
+    if (!target) return;
+
+    event.preventDefault();
+    document.body.classList.remove("mobile-menu-open");
+    document.body.style.overflow = "";
+    if (window.location.hash !== href) {
+      window.history.pushState(null, "", href);
+    }
+
+    const navbarHeight =
+      document.querySelector(".portfolio-navbar")?.getBoundingClientRect().height ?? 0;
+    const targetTop =
+      target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+    window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
   };
 
   return (
@@ -132,7 +148,7 @@ function Navbar() {
           <a
             href="#home"
             className="flex min-w-0 shrink items-center gap-2.5 sm:gap-3"
-            onClick={() => handleLinkClick("#home")}
+            onClick={(event) => handleLinkClick(event, "#home")}
           >
             <img
               src={logo}
@@ -158,7 +174,7 @@ function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => handleLinkClick(link.href)}
+                  onClick={(event) => handleLinkClick(event, link.href)}
                   className={`portfolio-navbar-link relative py-2 text-[13px] font-semibold transition-colors ${
                     active ? "portfolio-navbar-link-active" : ""
                   }`}
@@ -300,7 +316,7 @@ function Navbar() {
                       <a
                         key={link.href}
                         href={link.href}
-                        onClick={() => handleLinkClick(link.href)}
+                        onClick={(event) => handleLinkClick(event, link.href)}
                         className={`group flex items-center justify-between rounded-xl px-4 py-3 transition-all duration-200 ${
                           active
                             ? "portfolio-mobile-link-active border border-orange-500/40 bg-gradient-to-r from-orange-500/20 via-orange-500/10 to-transparent text-orange-400 font-bold shadow-[0_0_15px_rgba(249,115,22,0.12)]"
