@@ -206,6 +206,7 @@ export const myApps = [
         subtitle: "Finance Tracking App",
         projectSub: "React Native · Financial Tracking",
         technology: "React Native · JavaScript · Node.js · Express.js · MySQL",
+        playStoreUrl: "https://play.google.com/store/apps/details?id=com.cloudstier.trackfinaadmin&pcampaignid=web_share",
         category: "mobile",
         badge: "Mobile App",
         badgeIcon: "fas fa-mobile-alt",

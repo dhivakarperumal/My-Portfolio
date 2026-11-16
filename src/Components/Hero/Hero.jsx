@@ -40,8 +40,13 @@ function Hero() {
           <p className="hero-eyebrow"><span aria-hidden="true" /> Available for Freelance &amp; Full-time</p>
           <h1>Full Stack<br /><span>Developer</span></h1>
           <p className="hero-description">
-            I build modern, responsive and scalable <strong>web &amp; mobile applications</strong>
-            {" "}that solve real-world problems and create great user experiences.
+            Passionate <strong>Full Stack Developer</strong> with 2+ years of
+            experience developing responsive web and mobile applications using
+            React.js, React Native and JavaScript. Skilled in Node.js, Express.js,
+            MySQL, Firebase and REST API integration. Experienced in building
+            user-friendly applications, admin dashboards and business management
+            systems. Dedicated to writing clean code, solving problems and
+            delivering high-quality applications.
           </p>
 
           <div className="hero-actions">
