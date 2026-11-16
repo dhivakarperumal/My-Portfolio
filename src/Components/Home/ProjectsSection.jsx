@@ -46,19 +46,32 @@ function makeProjectCard(project, type, index) {
   };
 }
 
+function sortMobileApps(apps) {
+  return [...apps].sort((first, second) => (
+    Number(Boolean(second.playStoreUrl)) - Number(Boolean(first.playStoreUrl))
+    || first.id - second.id
+  ));
+}
+
 const allProjects = [
-  ...myProjects.map((project, index) => makeProjectCard(project, "web", index)),
-  ...myApps.map((project, index) => makeProjectCard(project, "mobile", index)),
+  ...[...myProjects]
+    .sort((first, second) => first.id - second.id)
+    .map((project, index) => makeProjectCard(project, "web", index)),
+  ...[...myApps]
+    .sort((first, second) => first.id - second.id)
+    .map((project, index) => makeProjectCard(project, "mobile", index)),
 ];
 
 const featuredProjects = [
-  ...featuredMobileTitles
-    .map((title) => myApps.find((project) => project.title === title))
-    .filter(Boolean)
-    .map((project, index) => makeProjectCard(project, "mobile", index)),
   ...myProjects
     .filter((project) => featuredWebIds.includes(project.id))
     .map((project, index) => makeProjectCard(project, "web", index)),
+  ...sortMobileApps(
+    featuredMobileTitles
+      .map((title) => myApps.find((project) => project.title === title))
+      .filter(Boolean)
+  )
+    .map((project, index) => makeProjectCard(project, "mobile", index)),
 ];
 
 const filters = [
