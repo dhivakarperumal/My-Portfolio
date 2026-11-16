@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   BriefcaseBusiness,
-  CalendarDays,
   Code2,
   Mail,
   MapPin,
@@ -16,6 +15,8 @@ import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import PageContainer from "../../CommenComponets/PageContainer.jsx";
 import "./ContactSection.css";
+
+const contactAddress = "122 Sollaikkolaimedu, Asanambattu Road, Nayakkaneri Post, Ambur Tk, Tirupathur Dist 635802";
 
 const contactDetails = [
   {
@@ -36,17 +37,18 @@ const contactDetails = [
   },
   {
     title: "Location",
-    value: "122 Sollaikkolaimedu, Asanambattu Road, Nayakkaneri Post, Ambur Tk, Tirupathur Dist 635802",
+    value: contactAddress,
     note: "Available for remote work",
     icon: MapPin,
     accent: "blue",
   },
   {
-    title: "Freelance",
-    value: "Available for projects",
-    note: "Let’s discuss your requirements",
-    icon: CalendarDays,
-    accent: "pink",
+    title: "Google Maps",
+    value: "View address on map",
+    note: "Open directions in Google Maps",
+    href: `https://maps.google.com/?q=${encodeURIComponent(contactAddress)}`,
+    icon: MapPin,
+    accent: "blue",
   },
 ];
 
@@ -128,6 +130,8 @@ function ContactSection() {
                   <a
                     className={`contact-detail-card is-${accent}${title === "Location" ? " is-location" : ""}`}
                     href={href}
+                    target={href.startsWith("https://") ? "_blank" : undefined}
+                    rel={href.startsWith("https://") ? "noreferrer" : undefined}
                     key={title}
                   >
                     {content}
@@ -140,7 +144,6 @@ function ContactSection() {
               })}
 
               <div className="contact-social-row">
-                <span className="contact-follow-label">Follow Me <i /></span>
                 <div className="contact-social-links">
                   {socialLinks.map(({ label, href, icon: Icon, accent }) => (
                     <a

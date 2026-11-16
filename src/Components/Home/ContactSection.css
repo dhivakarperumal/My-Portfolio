@@ -170,7 +170,6 @@ a.contact-detail-card:hover {
 
 .contact-detail-card.is-violet { --contact-accent: #a855f7; }
 .contact-detail-card.is-blue { --contact-accent: #0ea5e9; }
-.contact-detail-card.is-pink { --contact-accent: #ec4899; }
 .contact-detail-card.is-location { grid-column: 1 / -1; }
 
 .contact-detail-icon {
@@ -215,26 +214,6 @@ a.contact-detail-card:hover {
   min-height: 74px;
   grid-column: 1 / -1;
   margin-top: 7px;
-}
-
-.contact-follow-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  color: #cbd5e1;
-  font-family: "Space Grotesk", cursive;
-  font-size: 1.1rem;
-  font-style: italic;
-  white-space: nowrap;
-}
-
-.contact-follow-label i {
-  display: block;
-  width: 30px;
-  height: 12px;
-  border-bottom: 2px solid #cbd5e1;
-  border-radius: 50%;
-  transform: rotate(-13deg);
 }
 
 .contact-social-links { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -587,16 +566,10 @@ a.contact-detail-card:hover {
     min-height: 60px;
     margin: 0;
   }
-  .contact-follow-label { gap: 5px; font-size: .85rem; }
-  .contact-follow-label i { width: 14px; }
   .contact-social-links { flex-wrap: nowrap; gap: 6px; }
   .contact-social-links a { width: 36px; height: 36px; }
   .contact-idea-card { min-height: 165px; }
   .contact-form-panel { padding: 20px; }
-}
-
-@media (min-width: 561px) and (max-width: 600px) {
-  .contact-social-row { grid-column: 1 / -1; }
 }
 
 @media (max-width: 560px) {
@@ -613,12 +586,14 @@ a.contact-detail-card:hover {
   .contact-detail-copy strong { font-size: .73rem; }
   .contact-detail-copy > span { font-size: .62rem; }
   .contact-detail-copy small { font-size: .54rem; }
-  .contact-social-row { grid-column: 1 / -1; gap: 10px; }
-  .contact-follow-label { gap: 5px; font-size: .9rem; }
-  .contact-follow-label i { width: 19px; }
-  .contact-social-links { gap: 7px; }
-  .contact-social-links a { width: 36px; height: 36px; }
-  .contact-social-links a svg { width: 18px; height: 18px; }
+  .contact-social-row {
+    grid-column: auto;
+    justify-content: space-between;
+    gap: 4px;
+  }
+  .contact-social-links { flex-wrap: nowrap; gap: 3px; }
+  .contact-social-links a { width: 27px; height: 27px; }
+  .contact-social-links a svg { width: 14px; height: 14px; }
   .contact-idea-card { min-height: 143px; grid-template-columns: .9fr 1.1fr; gap: 4px; padding: 11px; }
   .contact-laptop { min-height: 115px; transform: scale(.85); }
   .contact-idea-copy > strong { font-size: 1.27rem; }
@@ -638,6 +613,13 @@ a.contact-detail-card:hover {
   .contact-trust-item > svg { width: 16px; height: 16px; }
   .contact-trust-item strong { font-size: .49rem; }
   .contact-trust-item small { font-size: .46rem; }
+}
+
+@media (max-width: 380px) {
+  .contact-social-row { grid-column: 1 / -1; justify-content: flex-start; gap: 10px; }
+  .contact-social-links { gap: 7px; }
+  .contact-social-links a { width: 36px; height: 36px; }
+  .contact-social-links a svg { width: 18px; height: 18px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

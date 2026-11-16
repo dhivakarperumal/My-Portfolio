@@ -7,8 +7,6 @@ import {
   Code2,
   Cpu,
   Database,
-  Headphones,
-  Handshake,
   Layers3,
   LayoutDashboard,
   Palette,
@@ -115,13 +113,6 @@ const services = [
     badge: ShieldCheck,
     accent: "amber",
   },
-];
-
-const promises = [
-  { title: "Client Focused", description: "Your goals, my priority", icon: Handshake, accent: "orange" },
-  { title: "Quality Code", description: "Clean & maintainable", icon: ShieldCheck, accent: "violet" },
-  { title: "On-Time Delivery", description: "Committed to deadlines", icon: Rocket, accent: "blue" },
-  { title: "Ongoing Support", description: "Always here to help", icon: Headphones, accent: "pink" },
 ];
 
 const process = [
@@ -235,19 +226,6 @@ function ServicesSection() {
                 </a>
               </div>
             </article>
-          ))}
-        </div>
-
-        {/* Value Promises */}
-        <div className="services-promises" aria-label="What you can expect">
-          {promises.map(({ title, description, icon: Icon, accent }) => (
-            <div className={`services-promise is-${accent}`} key={title}>
-              <span><Icon size={24} /></span>
-              <div>
-                <strong>{title}</strong>
-                <small>{description}</small>
-              </div>
-            </div>
           ))}
         </div>
 

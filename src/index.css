@@ -2429,6 +2429,8 @@ body.mobile-menu-open .floating-actions-container {
 
 .portfolio-footer-newsletter {
   display: flex;
+  width: 100%;
+  max-width: 320px;
   flex-direction: column;
   align-items: flex-start;
   gap: 14px;
@@ -2515,21 +2517,28 @@ body.mobile-menu-open .floating-actions-container {
   line-height: 1.8;
 }
 
-.portfolio-footer-address {
+.portfolio-footer-socials {
   display: flex;
-  max-width: 360px;
-  align-items: flex-start;
-  gap: 8px;
-  margin-top: 12px;
-  color: var(--text-secondary);
-  font-size: .75rem;
-  line-height: 1.6;
-  overflow-wrap: anywhere;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 16px;
 }
 
-.portfolio-footer-address svg {
-  flex: 0 0 auto;
-  margin-top: 2px;
+.portfolio-footer-socials a {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  transition: color var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.portfolio-footer-socials a:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
   color: var(--accent);
 }
 
@@ -2600,13 +2609,24 @@ body.mobile-menu-open .floating-actions-container {
   color: var(--accent);
 }
 
-.portfolio-social-links a {
+.portfolio-contact-links a {
   display: flex;
+  min-width: 0;
   align-items: center;
   gap: 16px;
+  overflow-wrap: anywhere;
 }
 
-.portfolio-social-links svg {
+.portfolio-contact-links li:last-child a {
+  align-items: flex-start;
+}
+
+.portfolio-contact-links svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+.portfolio-contact-links svg {
   color: var(--accent);
 }
 

@@ -6,7 +6,13 @@ import {
   UsersRound,
   Zap,
 } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa";
 import resumePdf from "../../../Datas/DHIVAKAR P.pdf";
 import { projectCount } from "../../../Datas/projectStats.js";
 import logo from "../../../../public/Images/photo.jpg";
@@ -69,11 +75,20 @@ function AboutIntro() {
               <a href={resumePdf} download="DHIVAKAR P.pdf" className="about-hero-resume">
                 <Send size={17} fill="currentColor" /> Download Resume
               </a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="about-hero-social">
+              <a href="https://github.com/dhivakarperumal" target="_blank" rel="noreferrer" className="about-hero-social">
                 <FaGithub size={19} /> View GitHub
               </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="about-hero-social about-hero-linkedin">
+              <a href="https://www.linkedin.com/in/dhivakar-perumal/" target="_blank" rel="noreferrer" className="about-hero-social about-hero-linkedin">
                 <FaLinkedin size={19} /> Connect on LinkedIn
+              </a>
+              <a href="https://wa.me/918940450960" target="_blank" rel="noreferrer" className="about-hero-social">
+                <FaWhatsapp size={19} /> WhatsApp
+              </a>
+              <a href="https://www.instagram.com/dhivakar/" target="_blank" rel="noreferrer" className="about-hero-social">
+                <FaInstagram size={19} /> Instagram
+              </a>
+              <a href="https://www.facebook.com/fkdidf" target="_blank" rel="noreferrer" className="about-hero-social">
+                <FaFacebookF size={19} /> Facebook
               </a>
             </div>
           </div>

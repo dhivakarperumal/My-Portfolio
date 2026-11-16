@@ -1,6 +1,12 @@
 import { useState } from "react";
-import { ArrowUp, Mail, MapPin, Send } from "lucide-react";
-import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { ArrowUp, Mail, MapPin, Phone, Send } from "lucide-react";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
 import logo from "../../public/Images/tab.png";
 import PageContainer from "./PageContainer";
 
@@ -22,6 +28,14 @@ const services = [
 ];
 
 const contactAddress = "122 Sollaikkolaimedu, Asanambattu Road, Nayakkaneri Post, Ambur Tk, Tirupathur Dist 635802";
+
+const socialLinks = [
+  { label: "GitHub", href: "https://github.com/dhivakarperumal", icon: FaGithub },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/dhivakar-perumal/", icon: FaLinkedinIn },
+  { label: "Instagram", href: "https://www.instagram.com/dhivakar/", icon: FaInstagram },
+  { label: "WhatsApp", href: "https://wa.me/918940450960", icon: FaWhatsapp },
+  { label: "Facebook", href: "https://www.facebook.com/fkdidf", icon: FaFacebookF },
+];
 
 function Footer() {
   const [email, setEmail] = useState("");
@@ -49,15 +63,20 @@ function Footer() {
               </span>
             </a>
             <p>Building modern web and mobile applications with passion and technology.</p>
-            <a
-              className="portfolio-footer-address"
-              href={`https://maps.google.com/?q=${encodeURIComponent(contactAddress)}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <MapPin size={17} />
-              <span>{contactAddress}</span>
-            </a>
+            <div className="portfolio-footer-socials" aria-label="Social profiles">
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                  title={label}
+                >
+                  <Icon size={17} />
+                </a>
+              ))}
+            </div>
           </div>
 
           <div>
@@ -77,12 +96,19 @@ function Footer() {
           </div>
 
           <div>
-            <h3>Follow Me</h3>
-            <ul className="portfolio-social-links">
-              <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer"><FaLinkedinIn size={22} /> LinkedIn</a></li>
-              <li><a href="https://github.com" target="_blank" rel="noreferrer"><FaGithub size={22} /> GitHub</a></li>
-              <li><a href="https://wa.me/918940450960" target="_blank" rel="noreferrer"><FaWhatsapp size={22} /> WhatsApp</a></li>
-              <li><a href="mailto:dhivakarp305@gmail.com"><Mail size={22} /> Email</a></li>
+            <h3>Contact Me</h3>
+            <ul className="portfolio-contact-links">
+              <li><a href="mailto:dhivakarp305@gmail.com"><Mail size={18} /> dhivakarp305@gmail.com</a></li>
+              <li><a href="tel:+918940450960"><Phone size={18} /> +91 8940450960</a></li>
+              <li>
+                <a
+                  href={`https://maps.google.com/?q=${encodeURIComponent(contactAddress)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <MapPin size={18} /> {contactAddress}
+                </a>
+              </li>
             </ul>
           </div>
 

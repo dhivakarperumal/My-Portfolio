@@ -130,11 +130,6 @@ function ProjectsSection() {
               real-world problem solving.
             </p>
           </div>
-          <div className="projects-completed">
-            <span><Layers3 size={23} /></span>
-            <strong>{allProjects.length}</strong>
-            <small>Projects Listed</small>
-          </div>
         </header>
 
         <div className="projects-filters" aria-label="Filter projects">

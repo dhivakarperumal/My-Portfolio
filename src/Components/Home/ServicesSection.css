@@ -377,55 +377,6 @@
 }
 
 /* =========================================================
-   VALUE PROMISES SECTION
-========================================================= */
-.services-promises {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 36px;
-  padding: 16px 20px;
-  border: 1px solid rgba(168, 85, 247, 0.35);
-  border-radius: 16px;
-  background:
-    linear-gradient(#090d1b, #090d1b) padding-box,
-    linear-gradient(100deg, rgba(249, 115, 22, 0.4), rgba(168, 85, 247, 0.4)) border-box;
-}
-
-.services-promise {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-  padding: 6px 12px;
-}
-
-.services-promise + .services-promise {
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.services-promise > span {
-  display: grid;
-  width: 44px;
-  height: 44px;
-  flex: 0 0 auto;
-  place-items: center;
-  border-radius: 50%;
-  border: 1px solid currentColor;
-  background: color-mix(in srgb, currentColor 14%, transparent);
-  filter: drop-shadow(0 0 10px currentColor);
-}
-
-.services-promise.is-orange { color: #fb923c; }
-.services-promise.is-violet { color: #c084fc; }
-.services-promise.is-blue   { color: #38bdf8; }
-.services-promise.is-pink   { color: #f472b6; }
-
-.services-promise div { display: grid; min-width: 0; }
-.services-promise strong { color: #f8fafc; font-size: 0.84rem; font-weight: 750; }
-.services-promise small { color: #94a3b8; font-size: 0.72rem; }
-
-/* =========================================================
    WORK PROCESS SECTION
 ========================================================= */
 .services-process {
@@ -595,26 +546,6 @@
   color: #0f172a;
 }
 
-[data-theme="light"] .services-promises {
-  border-color: rgba(168, 85, 247, 0.25);
-  background:
-    linear-gradient(#ffffff, #ffffff) padding-box,
-    linear-gradient(100deg, rgba(249, 115, 22, 0.35), rgba(168, 85, 247, 0.35)) border-box;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
-}
-
-[data-theme="light"] .services-promise + .services-promise {
-  border-left-color: #e2e8f0;
-}
-
-[data-theme="light"] .services-promise strong {
-  color: #0f172a;
-}
-
-[data-theme="light"] .services-promise small {
-  color: #64748b;
-}
-
 [data-theme="light"] .services-process {
   border-color: rgba(168, 85, 247, 0.3);
   background: linear-gradient(130deg, #ffffff, #f8fafc);
@@ -672,13 +603,6 @@
 }
 
 @media (max-width: 860px) {
-  .services-promises {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px 0;
-  }
-  .services-promise:nth-child(3) {
-    border-left: 0;
-  }
   .services-process-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     row-gap: 20px;
@@ -724,19 +648,6 @@
   .service-description {
     font-size: 0.82rem;
     -webkit-line-clamp: unset;
-  }
-  .services-promises {
-    grid-template-columns: 1fr;
-    padding: 14px 16px;
-    gap: 8px 0;
-  }
-  .services-promise + .services-promise {
-    border-left: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding-top: 10px;
-  }
-  [data-theme="light"] .services-promise + .services-promise {
-    border-top-color: #e2e8f0;
   }
   .services-process {
     padding-inline: 14px;
