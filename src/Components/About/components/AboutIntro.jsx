@@ -7,11 +7,13 @@ import {
   Zap,
 } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import resumePdf from "../../../Datas/DHIVAKAR P.pdf";
+import { projectCount } from "../../../Datas/projectStats.js";
 import logo from "../../../../public/Images/photo.jpg";
 import PageContainer from "../../../CommenComponets/PageContainer.jsx";
 
 const highlights = [
-  { value: "20+", label: "Projects Completed", icon: Code2, accent: "orange" },
+  { value: projectCount, label: "Projects Listed", icon: Code2, accent: "orange" },
   { value: "15+", label: "Technologies", icon: UsersRound, accent: "blue" },
   { value: "2.10", label: "Years Experience", icon: GraduationCap, accent: "pink" },
   { value: "100%", label: "Continuous Learning", icon: Zap, accent: "green" },
@@ -61,7 +63,7 @@ function AboutIntro() {
             </div>
 
             <div className="about-hero-actions">
-              <a href="/resume.pdf" download className="about-hero-resume">
+              <a href={resumePdf} download="DHIVAKAR P.pdf" className="about-hero-resume">
                 <Send size={17} fill="currentColor" /> Download Resume
               </a>
               <a href="https://github.com" target="_blank" rel="noreferrer" className="about-hero-social">

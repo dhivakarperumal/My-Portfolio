@@ -4,6 +4,7 @@ import {
   Download,
   Sparkles,
 } from "lucide-react";
+import resumePdf from "../../Datas/DHIVAKAR P.pdf";
 import logo from "../../../public/Images/photo.jpg";
 import PageContainer from "../../CommenComponets/PageContainer";
 import Skills from "./Skills";
@@ -24,7 +25,7 @@ function About() {
             backend systems.
           </p>
           <div className="about-actions">
-            <a href="/resume.pdf" download className="about-primary-button">
+            <a href={resumePdf} download="DHIVAKAR P.pdf" className="about-primary-button">
               Download Resume <Download size={17} />
             </a>
             <a href="#contact" className="about-secondary-button">

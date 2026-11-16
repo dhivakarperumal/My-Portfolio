@@ -90,6 +90,7 @@ export const myApps = [
         delay: 275
     },
     {
+        id: 5,
         title: "Gym & Fitness App",
         cardTitle: "DAP Fitness App",
         imageAlt: "DAP gym and fitness website",
@@ -111,6 +112,7 @@ export const myApps = [
         delay: 300
     },
     {
+        id: 6,
         title: "Q Techx Company App",
         cardTitle: "Q Techx App",
         imageAlt: "Q Techx company management system",
@@ -135,6 +137,7 @@ export const myApps = [
         delay: 350
     },
     {
+        id: 7,
         title: "Veetu Rusi Food User App",
         cardTitle: "Veetu Rusi App",
         imageAlt: "Veetu Rusi food ordering website",
@@ -155,6 +158,7 @@ export const myApps = [
         delay: 400
     },
     {
+        id: 8,
         title: "Veetu Rusi Home Chef App",
         cardTitle: "Veetu Rusi Home Chef",
         imageAlt: "Veetu Rusi Home Chef dashboard",
@@ -175,6 +179,7 @@ export const myApps = [
         delay: 425
     },
     {
+        id: 9,
         title: "Car Service Booking App",
         cardTitle: "Car Service Booking",
         imageAlt: "Car service booking and management system",
@@ -194,6 +199,7 @@ export const myApps = [
         delay: 450
     },
     {
+        id: 10,
         title: "TrackFina – Admin App",
         cardTitle: "TrackFina – Admin",
         imageAlt: "TrackFina Admin",
@@ -216,6 +222,7 @@ export const myApps = [
         delay: 200
     },
     {
+        id: 11,
         title: "TrackFina – Agent App",
         cardTitle: "TrackFina – Agent",
         imageAlt: "TrackFina Agent",
@@ -236,6 +243,7 @@ export const myApps = [
         delay: 250
     },
     {
+        id: 12,
         title: "Restaurant POS App",
         cardTitle: "Restaurant POS App",
         imageAlt: "Restaurant POS",

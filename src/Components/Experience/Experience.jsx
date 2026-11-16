@@ -5,10 +5,10 @@ import {
   GraduationCap,
   Heart,
   MapPin,
-  Smartphone,
   UsersRound,
 } from "lucide-react";
 import PageContainer from "../../CommenComponets/PageContainer";
+import { projectCount } from "../../Datas/projectStats.js";
 import "./Experience.css";
 
 const experiences = [
@@ -38,43 +38,28 @@ const experiences = [
     mark: "S",
   },
   {
-    period: "2022 — 2023",
-    date: "Jun 2022 – Dec 2023",
-    title: "Frontend Developer",
-    company: "Freelance Projects",
-    location: "Remote",
-    description:
-      "Worked on multiple web projects for small businesses and startups. Focused on modern UI/UX, responsive design and performance optimization.",
-    technologies: ["HTML5", "CSS3", "JavaScript", "React.js", "Bootstrap", "Tailwind CSS"],
-    icon: Code2,
-    accent: "violet",
-    mark: "</>",
-  },
-  {
-    period: "2021 — 2022",
-    date: "Jan 2021 – May 2022",
-    title: "React Native Developer",
-    company: "Personal & Client Projects",
-    location: "Tamil Nadu, India",
-    description:
-      "Developed Android mobile applications using React Native. Integrated APIs, implemented offline storage and built user-friendly mobile interfaces.",
-    technologies: ["React Native", "JavaScript", "REST APIs", "AsyncStorage", "Firebase"],
-    icon: Smartphone,
-    accent: "blue",
-    mark: "RN",
-  },
-  {
-    period: "2020 — 2021",
-    date: "Jun 2020 – Dec 2021",
-    title: "Web Developer (Intern)",
-    company: "Learning & Development",
-    location: "Tamil Nadu, India",
-    description:
-      "Started my journey in web development. Learned core technologies, worked on academic and personal projects and built a strong foundation in frontend development.",
-    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Git", "GitHub"],
+    period: "2021 — 2023",
+    date: "2021 – 2023",
+    title: "Master of Computer Applications (MCA)",
+    company: "K.S.R College of Engineering (Autonomous)",
+    location: "Tiruchengode, Tamil Nadu",
+    description: "GPA: 8.19",
+    technologies: [],
     icon: GraduationCap,
-    accent: "pink",
-    mark: "✦",
+    accent: "blue",
+    mark: "MCA",
+  },
+  {
+    period: "2018 — 2021",
+    date: "2018 – 2021",
+    title: "Bachelor of Science in Mathematics (B.Sc Mathematics)",
+    company: "Mazharul Uloom College",
+    location: "Ambur, Tamil Nadu",
+    description: "GPA: 7.4",
+    technologies: [],
+    icon: GraduationCap,
+    accent: "violet",
+    mark: "B.Sc",
   },
 ];
 
@@ -97,7 +82,7 @@ const technologyAccents = {
 };
 
 const highlights = [
-  { value: "20+", label: "Projects completed", icon: Code2, accent: "violet" },
+  { value: projectCount, label: "Projects listed", icon: Code2, accent: "violet" },
   { value: "15+", label: "Happy clients", icon: UsersRound, accent: "blue" },
   { value: "100%", label: "Client satisfaction", icon: Heart, accent: "pink" },
   { value: "Continuous", label: "Learning & growth", icon: GraduationCap, accent: "green" },
@@ -191,13 +176,15 @@ function Experience() {
                         </div>
                       </div>
                       <p className="experience-description">{item.description}</p>
-                      <ul className="experience-tags" aria-label="Technologies used">
-                        {item.technologies.map((technology) => (
-                          <li className={`is-${technologyAccents[technology] ?? "slate"}`} key={technology}>
-                            {technology}
-                          </li>
-                        ))}
-                      </ul>
+                      {item.technologies.length > 0 && (
+                        <ul className="experience-tags" aria-label="Technologies used">
+                          {item.technologies.map((technology) => (
+                            <li className={`is-${technologyAccents[technology] ?? "slate"}`} key={technology}>
+                              {technology}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </div>
                 </article>

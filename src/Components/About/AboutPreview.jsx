@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, CheckCircle2, Download, Mail, MapPin, Phone, GraduationCap, Cake, MessageCircle } from "lucide-react";
+import resumePdf from "../../Datas/DHIVAKAR P.pdf";
 import logo from "../../../public/Images/photo.jpg";
 import PageContainer from "../../CommenComponets/PageContainer";
 
@@ -53,7 +54,7 @@ function AboutPreview() {
             </div>
           )}
           <span className="about-preview-badge"><strong>2.10</strong> Years Experience</span>
-          <a href="/resume.pdf" download className="about-preview-cv-button">
+          <a href={resumePdf} download="DHIVAKAR P.pdf" className="about-preview-cv-button">
             <Download size={18} /> Download CV
           </a>
         </div>

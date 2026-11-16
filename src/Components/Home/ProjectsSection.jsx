@@ -119,8 +119,8 @@ function ProjectsSection() {
           </div>
           <div className="projects-completed">
             <span><Layers3 size={23} /></span>
-            <strong>20+</strong>
-            <small>Projects Completed</small>
+            <strong>{allProjects.length}</strong>
+            <small>Projects Listed</small>
           </div>
         </header>
 

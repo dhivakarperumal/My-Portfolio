@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
+import resumePdf from "../Datas/DHIVAKAR P.pdf";
 import logo from "../../public/Images/tab.png";
 import PageContainer from "./PageContainer";
 
@@ -218,8 +219,8 @@ function Navbar() {
               </AnimatePresence>
             </button>
             <a
-              href="/resume.pdf"
-              download
+              href={resumePdf}
+              download="DHIVAKAR P.pdf"
               className="portfolio-resume-button flex items-center gap-3 rounded-xl px-4 py-2 transition"
             >
               <span>Download Resume</span>
@@ -356,8 +357,8 @@ function Navbar() {
                 {/* Bottom Actions: Resume CTA & Direct Contact Row */}
                 <div className="mt-5 flex flex-col gap-4 border-t border-orange-500/15 pt-5">
                   <a
-                    href="/resume.pdf"
-                    download
+                    href={resumePdf}
+                    download="DHIVAKAR P.pdf"
                     className="portfolio-resume-button mt-3 flex min-h-[46px] w-full items-center justify-center gap-2.5 rounded-xl px-5 py-3 text-sm font-bold shadow-lg transition-all active:scale-[0.98]"
                   >
                     <span>Download Resume</span>
