@@ -1,6 +1,5 @@
 import { useMemo, useState } from "react";
 import {
-  ArrowRight,
   ArrowUpRight,
   Grid2X2,
   Layers3,
@@ -13,14 +12,6 @@ import { myApps } from "../../Datas/myapp.js";
 import myProjects from "../../Datas/myproject.js";
 import PageContainer from "../../CommenComponets/PageContainer.jsx";
 import "./ProjectsSection.css";
-
-const featuredMobileTitles = [
-  "Life Tracking App",
-  "Gym & Fitness App",
-  "Veetu Rusi Food User App",
-  "Kavi Dry Fruits App",
-];
-const featuredWebIds = [7, 10, 18, 16];
 
 function getImagePath(image = "") {
   return image
@@ -46,31 +37,12 @@ function makeProjectCard(project, type, index) {
   };
 }
 
-function sortMobileApps(apps) {
-  return [...apps].sort((first, second) => (
-    Number(Boolean(second.playStoreUrl)) - Number(Boolean(first.playStoreUrl))
-    || first.id - second.id
-  ));
-}
-
 const allProjects = [
   ...[...myProjects]
     .sort((first, second) => first.id - second.id)
     .map((project, index) => makeProjectCard(project, "web", index)),
   ...[...myApps]
     .sort((first, second) => first.id - second.id)
-    .map((project, index) => makeProjectCard(project, "mobile", index)),
-];
-
-const featuredProjects = [
-  ...myProjects
-    .filter((project) => featuredWebIds.includes(project.id))
-    .map((project, index) => makeProjectCard(project, "web", index)),
-  ...sortMobileApps(
-    featuredMobileTitles
-      .map((title) => myApps.find((project) => project.title === title))
-      .filter(Boolean)
-  )
     .map((project, index) => makeProjectCard(project, "mobile", index)),
 ];
 
@@ -104,12 +76,10 @@ function matchesFilter(project, filter) {
 
 function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState("all");
-  const [showAll, setShowAll] = useState(false);
 
   const visibleProjects = useMemo(() => {
-    const source = showAll ? allProjects : featuredProjects;
-    return source.filter((project) => matchesFilter(project, activeFilter));
-  }, [activeFilter, showAll]);
+    return allProjects.filter((project) => matchesFilter(project, activeFilter));
+  }, [activeFilter]);
 
   return (
     <section id="projects" className="projects-showcase" aria-labelledby="projects-title">
@@ -123,7 +93,7 @@ function ProjectsSection() {
         <header className="projects-showcase-heading">
           <div className="projects-showcase-intro">
             <span className="projects-showcase-eyebrow"><Layers3 size={15} /> My Projects</span>
-            <h2 id="projects-title">Featured <span>Projects</span></h2>
+            <h2 id="projects-title">All <span>Projects</span></h2>
             <p>
               Here are some of my recent works. Each project is built with passion,
               modern<br className="projects-heading-break" /> technologies and
@@ -259,16 +229,6 @@ function ProjectsSection() {
           ))}
         </div>
 
-        <div className="projects-more-wrap">
-          <button
-            type="button"
-            className="projects-more-button"
-            onClick={() => setShowAll((current) => !current)}
-          >
-            {showAll ? "Show Featured Projects" : "View All Projects"}
-            <ArrowRight size={17} />
-          </button>
-        </div>
       </PageContainer>
     </section>
   );

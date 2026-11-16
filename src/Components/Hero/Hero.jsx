@@ -69,7 +69,6 @@ function Hero() {
           </div>
 
           <div className="hero-socials">
-            <span>Follow Me</span>
             <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
             <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
             <a href="https://wa.me/918940450960" target="_blank" rel="noreferrer" aria-label="WhatsApp"><FaWhatsapp /></a>

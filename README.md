@@ -14,3 +14,13 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the Oxlint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+
+## Contact form email setup
+
+The contact form sends messages through EmailJS. Copy `.env.example` to `.env.local` and set
+`VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, and `VITE_EMAILJS_PUBLIC_KEY` from your
+EmailJS account. Restart the Vite development server after changing environment variables.
+
+Configure the EmailJS template with these parameters: `from_name`, `from_email`, `reply_to`,
+`phone`, `project_type`, `subject`, and `message`. Set the template recipient to
+`dhivakarp305@gmail.com`.

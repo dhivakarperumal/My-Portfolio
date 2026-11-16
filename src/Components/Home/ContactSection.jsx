@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   BriefcaseBusiness,
   Code2,
@@ -17,6 +18,11 @@ import PageContainer from "../../CommenComponets/PageContainer.jsx";
 import "./ContactSection.css";
 
 const contactAddress = "122 Sollaikkolaimedu, Asanambattu Road, Nayakkaneri Post, Ambur Tk, Tirupathur Dist 635802";
+const emailJsConfig = {
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+};
 
 const contactDetails = [
   {
@@ -67,29 +73,57 @@ const trustItems = [
 
 function ContactSection() {
   const [messageLength, setMessageLength] = useState(0);
-  const [formStatus, setFormStatus] = useState("");
+  const [formStatus, setFormStatus] = useState(null);
+  const [isSending, setIsSending] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    if (!emailJsConfig.serviceId || !emailJsConfig.templateId || !emailJsConfig.publicKey) {
+      setFormStatus({
+        type: "error",
+        message: "Email delivery is not configured. Please email dhivakarp305@gmail.com directly.",
+      });
+      return;
+    }
+
+    const formData = new FormData(form);
     const name = String(formData.get("name") || "").trim();
     const email = String(formData.get("email") || "").trim();
     const phone = String(formData.get("phone") || "").trim();
     const projectType = String(formData.get("projectType") || "").trim();
     const subject = String(formData.get("subject") || "").trim();
     const message = String(formData.get("message") || "").trim();
-    const emailSubject = subject || `Project enquiry from ${name}`;
-    const emailBody = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      phone ? `Phone: ${phone}` : "",
-      projectType ? `Project type: ${projectType}` : "",
-      "",
-      message,
-    ].filter((line) => line !== undefined).join("\n");
 
-    window.location.href = `mailto:dhivakarp305@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-    setFormStatus("Your email app should open with your message ready to send.");
+    setIsSending(true);
+    setFormStatus(null);
+    try {
+      await emailjs.send(
+        emailJsConfig.serviceId,
+        emailJsConfig.templateId,
+        {
+          from_name: name,
+          from_email: email,
+          reply_to: email,
+          phone,
+          project_type: projectType,
+          subject,
+          message,
+        },
+        { publicKey: emailJsConfig.publicKey }
+      );
+      setFormStatus({ type: "success", message: "Message sent successfully. Thank you for reaching out!" });
+      form.reset();
+      setMessageLength(0);
+    } catch (error) {
+      console.error("EmailJS contact form request failed:", error);
+      setFormStatus({
+        type: "error",
+        message: "Your message could not be sent. Please try again or email dhivakarp305@gmail.com directly.",
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -232,13 +266,18 @@ function ContactSection() {
                 />
                 <span className="contact-character-count">{messageLength}/500</span>
               </label>
-              <button className="contact-submit" type="submit">
-                <Send size={19} /> Send Message
+              <button className="contact-submit" type="submit" disabled={isSending}>
+                <Send size={19} /> {isSending ? "Sending..." : "Send Message"}
               </button>
               <p className="contact-form-note">
-                Submitting opens your email app with the message ready to send.
+                Your message will be sent directly through EmailJS.
               </p>
-              <p className="contact-form-status" aria-live="polite">{formStatus}</p>
+              <p
+                className={`contact-form-status${formStatus?.type === "error" ? " is-error" : ""}`}
+                aria-live="polite"
+              >
+                {formStatus?.message || ""}
+              </p>
             </form>
 
             <div className="contact-trust-row">

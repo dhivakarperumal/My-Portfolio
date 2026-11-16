@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import {
   Award,
+  BriefcaseBusiness,
   ChevronRight,
-  Download,
   FolderGit2,
   Home,
   Layers,
@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
-import resumePdf from "../Datas/DHIVAKAR P.pdf";
 import logo from "../../public/Images/tab.png";
 import PageContainer from "./PageContainer";
 
@@ -219,12 +218,12 @@ function Navbar() {
               </AnimatePresence>
             </button>
             <a
-              href={resumePdf}
-              download="DHIVAKAR P.pdf"
+              href="#contact"
+              onClick={(event) => handleLinkClick(event, "#contact")}
               className="portfolio-resume-button flex items-center gap-3 rounded-xl px-4 py-2 transition"
             >
-              <span>Download Resume</span>
-              <Download className="portfolio-resume-icon" size={18} />
+              <span>Hire Me</span>
+              <BriefcaseBusiness className="portfolio-resume-icon" size={18} />
             </a>
           </div>
 
@@ -305,11 +304,11 @@ function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.22, ease: "easeOut" }}
-              className="portfolio-mobile-menu fixed left-0 right-0 top-[64px] sm:top-[68px] z-50 max-h-[calc(100vh-68px)] overflow-y-auto overscroll-contain border-b border-orange-500/20 px-6 py-6 shadow-2xl lg:hidden"
+              className="portfolio-mobile-menu fixed left-0 right-0 top-[64px] z-50 h-[calc(100dvh-64px)] w-screen max-w-none overflow-y-auto overscroll-contain border-b border-orange-500/20 px-6 py-6 shadow-2xl sm:top-[68px] sm:h-[calc(100dvh-68px)] lg:hidden"
             >
               <div className="mx-auto flex w-full max-w-sm flex-col">
                 {/* Navigation Links List */}
-                <nav aria-label="Mobile Navigation" className="flex flex-col gap-2">
+                <nav aria-label="Mobile Navigation" className="flex flex-col gap-4">
                   {navLinks.map((link) => {
                     const active = activeLink === link.href;
                     const Icon = link.icon;
@@ -318,7 +317,7 @@ function Navbar() {
                         key={link.href}
                         href={link.href}
                         onClick={(event) => handleLinkClick(event, link.href)}
-                        className={`group flex items-center justify-between rounded-xl px-4 py-3 transition-all duration-200 ${
+                        className={`group flex items-center justify-between rounded-xl px-4 py-2.5 transition-all duration-200 ${
                           active
                             ? "portfolio-mobile-link-active border border-orange-500/40 bg-gradient-to-r from-orange-500/20 via-orange-500/10 to-transparent text-orange-400 font-bold shadow-[0_0_15px_rgba(249,115,22,0.12)]"
                             : "portfolio-mobile-link border border-transparent text-slate-300 hover:text-orange-400 hover:bg-white/[0.04]"
@@ -357,12 +356,12 @@ function Navbar() {
                 {/* Bottom Actions: Resume CTA & Direct Contact Row */}
                 <div className="mt-5 flex flex-col gap-4 border-t border-orange-500/15 pt-5">
                   <a
-                    href={resumePdf}
-                    download="DHIVAKAR P.pdf"
-                    className="portfolio-resume-button mt-3 flex min-h-[46px] w-full items-center justify-center gap-2.5 rounded-xl px-5 py-3 text-sm font-bold shadow-lg transition-all active:scale-[0.98]"
+                    href="#contact"
+                    onClick={(event) => handleLinkClick(event, "#contact")}
+                    className="portfolio-resume-button mt-2 mb-1 flex min-h-[46px] w-full items-center justify-center gap-2.5 rounded-xl px-5 py-3 text-sm font-bold shadow-lg transition-all active:scale-[0.98]"
                   >
-                    <span>Download Resume</span>
-                    <Download size={18} className="portfolio-resume-icon" />
+                    <span>Hire Me</span>
+                    <BriefcaseBusiness size={18} className="portfolio-resume-icon" />
                   </a>
 
                   <div className="flex items-center justify-center gap-3 pt-1">
