@@ -213,6 +213,7 @@ a.contact-detail-card:hover {
   align-items: center;
   gap: 16px;
   min-height: 74px;
+  grid-column: 1 / -1;
   margin-top: 7px;
 }
 
@@ -579,9 +580,23 @@ a.contact-detail-card:hover {
 @media (max-width: 900px) {
   .contact-layout { grid-template-columns: minmax(0, 1fr); gap: 18px; }
   .contact-sidebar { display: grid; grid-template-columns: 1fr; gap: 12px; }
-  .contact-social-row { margin: 0; }
+  .contact-social-row {
+    grid-column: auto;
+    min-width: 0;
+    gap: 8px;
+    min-height: 60px;
+    margin: 0;
+  }
+  .contact-follow-label { gap: 5px; font-size: .85rem; }
+  .contact-follow-label i { width: 14px; }
+  .contact-social-links { flex-wrap: nowrap; gap: 6px; }
+  .contact-social-links a { width: 36px; height: 36px; }
   .contact-idea-card { min-height: 165px; }
   .contact-form-panel { padding: 20px; }
+}
+
+@media (min-width: 561px) and (max-width: 600px) {
+  .contact-social-row { grid-column: 1 / -1; }
 }
 
 @media (max-width: 560px) {
@@ -598,7 +613,7 @@ a.contact-detail-card:hover {
   .contact-detail-copy strong { font-size: .73rem; }
   .contact-detail-copy > span { font-size: .62rem; }
   .contact-detail-copy small { font-size: .54rem; }
-  .contact-social-row { gap: 10px; }
+  .contact-social-row { grid-column: 1 / -1; gap: 10px; }
   .contact-follow-label { gap: 5px; font-size: .9rem; }
   .contact-follow-label i { width: 19px; }
   .contact-social-links { gap: 7px; }

@@ -138,23 +138,23 @@ function ContactSection() {
                   </div>
                 );
               })}
-            </div>
 
-            <div className="contact-social-row">
-              <span className="contact-follow-label">Follow Me <i /></span>
-              <div className="contact-social-links">
-                {socialLinks.map(({ label, href, icon: Icon, accent }) => (
-                  <a
-                    className={`is-${accent}`}
-                    href={href}
-                    key={label}
-                    target={href.startsWith("mailto:") ? undefined : "_blank"}
-                    rel={href.startsWith("mailto:") ? undefined : "noreferrer"}
-                    aria-label={label}
-                  >
-                    <Icon size={21} />
-                  </a>
-                ))}
+              <div className="contact-social-row">
+                <span className="contact-follow-label">Follow Me <i /></span>
+                <div className="contact-social-links">
+                  {socialLinks.map(({ label, href, icon: Icon, accent }) => (
+                    <a
+                      className={`is-${accent}`}
+                      href={href}
+                      key={label}
+                      target={href.startsWith("mailto:") ? undefined : "_blank"}
+                      rel={href.startsWith("mailto:") ? undefined : "noreferrer"}
+                      aria-label={label}
+                    >
+                      <Icon size={21} />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 
