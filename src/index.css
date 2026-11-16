@@ -2427,41 +2427,22 @@ body.mobile-menu-open .floating-actions-container {
   color: var(--text);
 }
 
-.portfolio-newsletter {
+.portfolio-footer-newsletter {
   display: flex;
-  align-items: center;
-  gap: 28px;
-  margin-block: 36px 26px;
-  padding: 38px 48px;
-  border: 1px solid var(--border-hover);
-  border-radius: 24px;
-  background: linear-gradient(110deg, color-mix(in srgb, var(--primary) 25%, var(--bg-secondary)), var(--surface));
-  box-shadow: var(--glow);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
 }
 
-.portfolio-newsletter-icon {
-  display: grid;
-  flex: 0 0 120px;
-  width: 120px;
-  height: 108px;
-  place-items: center;
-  border: 1px solid var(--accent);
-  border-radius: 22px;
-  background: var(--gradient);
-  color: #fff;
-  box-shadow: 0 0 24px color-mix(in srgb, var(--accent) 45%, transparent);
-}
-
-.portfolio-newsletter-copy {
-  flex: 1;
-}
-
-.portfolio-newsletter-copy h2 {
-  font-size: clamp(2rem, 3.2vw, 3.2rem);
+.portfolio-footer-newsletter .portfolio-newsletter-copy h3 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
   font-weight: 800;
+  line-height: 1.2;
 }
 
-.portfolio-newsletter-copy h2 span {
+.portfolio-newsletter-copy h3 span {
   background: var(--gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -2469,32 +2450,38 @@ body.mobile-menu-open .floating-actions-container {
 }
 
 .portfolio-newsletter-copy p {
-  margin-top: 8px;
-  font-size: 1.05rem;
+  margin-top: 7px;
+  color: var(--text-secondary);
+  font-size: .78rem;
+  line-height: 1.55;
 }
 
 .portfolio-newsletter-form {
-  display: flex;
-  flex: 1.25;
-  gap: 14px;
+  display: grid;
+  width: 100%;
+  gap: 10px;
 }
 
 .portfolio-email-field {
   display: flex;
-  flex: 1;
+  width: 100%;
   align-items: center;
-  gap: 12px;
+  gap: 9px;
   min-width: 0;
-  padding: 0 18px;
-  border: 1px solid var(--accent-blue);
-  border-radius: 18px;
+  min-height: 44px;
+  padding: 0 11px;
+  border: 1px solid var(--border-hover);
+  border-radius: 12px;
   color: var(--muted);
 }
 
 .portfolio-email-field input {
+  width: 100%;
+  min-width: 0;
   border: 0;
   background: transparent;
   color: var(--text);
+  font-size: .74rem;
 }
 
 .portfolio-email-field input:focus {
@@ -2505,21 +2492,21 @@ body.mobile-menu-open .floating-actions-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  min-width: 190px;
+  gap: 10px;
+  min-height: 44px;
   border: 0;
-  border-radius: 18px;
+  border-radius: 12px;
   background: linear-gradient(100deg, #c026d3, #06b6d4);
   color: #fff;
+  font-size: .8rem;
   font-weight: 800;
 }
 
 .portfolio-footer-grid {
   display: grid;
-  grid-template-columns: 1.65fr 1fr 1.2fr 1.15fr;
-  gap: 56px;
+  grid-template-columns: 1.5fr .85fr 1fr .95fr 1.35fr;
+  gap: clamp(20px, 2.5vw, 40px);
   padding-block: 36px 42px;
-  border-top: 1px solid var(--border);
 }
 
 .portfolio-footer-brand p {
@@ -2578,8 +2565,21 @@ body.mobile-menu-open .floating-actions-container {
 }
 
 .portfolio-footer-grid h3 {
+  position: relative;
   margin-bottom: 18px;
+  padding-bottom: 9px;
   font-size: 1.15rem;
+}
+
+.portfolio-footer-grid h3::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gradient);
+  content: "";
 }
 
 .portfolio-footer-grid ul {
@@ -2639,45 +2639,19 @@ body.mobile-menu-open .floating-actions-container {
   color: var(--text);
 }
 
-@media (max-width: 900px) {
-  .portfolio-newsletter {
-    flex-wrap: wrap;
-    padding: 28px;
-  }
-
-  .portfolio-newsletter-form {
-    flex-basis: 100%;
-  }
-
+@media (max-width: 1100px) {
   .portfolio-footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .portfolio-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 600px) {
-  .portfolio-newsletter {
-    gap: 18px;
-    padding: 22px;
-  }
-
-  .portfolio-newsletter-icon {
-    flex-basis: 76px;
-    width: 76px;
-    height: 76px;
-  }
-
-  .portfolio-newsletter-form {
-    flex-direction: column;
-  }
-
-  .portfolio-email-field {
-    min-height: 56px;
-  }
-
-  .portfolio-newsletter-form button {
-    min-height: 56px;
-  }
-
   .portfolio-footer-grid {
     grid-template-columns: 1fr;
     gap: 32px;

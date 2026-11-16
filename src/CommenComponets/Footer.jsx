@@ -7,7 +7,10 @@ import PageContainer from "./PageContainer";
 const quickLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#services", label: "Services" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -36,39 +39,6 @@ function Footer() {
   return (
     <footer className="portfolio-footer">
       <PageContainer fullWidth>
-        <section className="portfolio-newsletter">
-          <div className="portfolio-newsletter-icon">
-            <Mail size={42} strokeWidth={1.7} />
-          </div>
-          <div className="portfolio-newsletter-copy">
-            <h2>
-              Stay <span>in the Loop</span>
-            </h2>
-            <p>Get updates on my latest projects, articles, and developer insights.</p>
-          </div>
-          <form className="portfolio-newsletter-form" onSubmit={handleSubmit}>
-            <label className="sr-only" htmlFor="footer-email">Email address</label>
-            <div className="portfolio-email-field">
-              <Mail size={20} />
-              <input
-                id="footer-email"
-                type="email"
-                value={email}
-                onChange={(event) => {
-                  setEmail(event.target.value);
-                  setSubmitted(false);
-                }}
-                placeholder="Enter your email address"
-                required
-              />
-            </div>
-            <button type="submit">
-              {submitted ? "Subscribed" : "Subscribe"}
-              <Send size={20} />
-            </button>
-          </form>
-        </section>
-
         <section className="portfolio-footer-grid">
           <div className="portfolio-footer-brand">
             <a href="#home" className="portfolio-footer-logo">
@@ -114,6 +84,34 @@ function Footer() {
               <li><a href="https://wa.me/918940450960" target="_blank" rel="noreferrer"><FaWhatsapp size={22} /> WhatsApp</a></li>
               <li><a href="mailto:dhivakarp305@gmail.com"><Mail size={22} /> Email</a></li>
             </ul>
+          </div>
+
+          <div className="portfolio-footer-newsletter">
+            <div className="portfolio-newsletter-copy">
+              <h3>Stay <span>in the Loop</span></h3>
+              <p>Get updates on my latest projects, articles, and developer insights.</p>
+            </div>
+            <form className="portfolio-newsletter-form" onSubmit={handleSubmit}>
+              <label className="sr-only" htmlFor="footer-email">Email address</label>
+              <div className="portfolio-email-field">
+                <Mail size={18} />
+                <input
+                  id="footer-email"
+                  type="email"
+                  value={email}
+                  onChange={(event) => {
+                    setEmail(event.target.value);
+                    setSubmitted(false);
+                  }}
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+              <button type="submit">
+                {submitted ? "Subscribed" : "Subscribe"}
+                <Send size={18} />
+              </button>
+            </form>
           </div>
         </section>
       </PageContainer>
