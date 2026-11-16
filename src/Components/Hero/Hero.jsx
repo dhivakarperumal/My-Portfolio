@@ -38,7 +38,8 @@ function Hero() {
       <div className="page-container hero-content">
         <div className="hero-copy">
           <p className="hero-eyebrow"><span aria-hidden="true" /> Available for Freelance &amp; Full-time</p>
-          <h1>Full Stack<br /><span>Developer</span></h1>
+          <p className="hero-name">Hi, I&apos;m <strong>Dhivakar P</strong></p>
+          <h1>Full Stack <span>Developer</span></h1>
           <p className="hero-description">
             Passionate <strong>Full Stack Developer</strong> with 2+ years of
             experience developing responsive web and mobile applications using

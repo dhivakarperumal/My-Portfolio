@@ -46,10 +46,13 @@ function AboutIntro() {
             <h1>Hi, I&apos;m <span>Dhivakar P</span></h1>
             <h2>Full Stack Developer</h2>
             <p className="about-hero-description">
-              I&apos;m a passionate Full Stack Developer with <strong>2 years and 10 months</strong> of
-              experience in building modern, responsive and scalable <b>web and mobile
-              applications.</b> I love turning ideas into <b>real-world solutions</b> using
-              the latest technologies.
+              I&apos;m a dedicated Full Stack Developer with <strong>2 years and 10 months of
+              professional experience</strong>, specializing in creating modern web applications
+              and cross-platform mobile solutions. I enjoy transforming business requirements into
+              functional, scalable, and user-friendly applications. Experienced in React.js, React
+              Native, JavaScript, Node.js, Express.js, MySQL, and Firebase. Passionate about building
+              innovative digital products, optimizing application performance, and delivering
+              seamless user experiences through clean and maintainable code.
             </p>
 
             <div className="about-hero-stats">
