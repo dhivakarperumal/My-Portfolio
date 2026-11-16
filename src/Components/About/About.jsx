@@ -49,7 +49,7 @@ function About() {
           </blockquote>
           <div className="about-experience-badge">
             <BriefcaseBusiness size={19} />
-            <span><strong>2.5+</strong><small>Years Experience</small></span>
+            <span><strong>2.10</strong><small>Years Experience</small></span>
           </div>
         </div>
       </PageContainer>

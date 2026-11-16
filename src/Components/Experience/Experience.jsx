@@ -15,15 +15,27 @@ const experiences = [
   {
     period: "2024 — Present",
     date: "Jan 2024 – Present",
-    title: "Full Stack Developer",
-    company: "QTechX Solutions",
-    location: "Tamil Nadu, India",
+    title: "Front-End Developer / Full Stack Developer",
+    company: "Q-Techx Solutions",
+    location: "Tiruppattur, Tamil Nadu",
     description:
-      "Developing and maintaining web and mobile applications using React.js, React Native, Node.js and MySQL. Collaborating with clients to deliver scalable and user-friendly digital solutions.",
-    technologies: ["React.js", "React Native", "Node.js", "Express.js", "MySQL", "Tailwind CSS"],
+      "Develop responsive web and mobile applications with React.js, React Native, JavaScript, Tailwind CSS and Firebase. Build reusable component-based architectures with real-time database integrations, ensure cross-platform compatibility and performance, and create clean, user-friendly interfaces. Collaborate with the team using Agile practices and Git/GitHub.",
+    technologies: ["React.js", "React Native", "JavaScript", "Tailwind CSS", "Firebase", "Git", "GitHub"],
     icon: BriefcaseBusiness,
     accent: "orange",
     mark: "Q",
+  },
+  {
+    period: "2023 — 2023",
+    date: "Sep 2023 – Nov 2023",
+    title: "Frontend Web Developer",
+    company: "Senchola University",
+    description:
+      "Contributed to an e-commerce website using React, completing tasks on schedule while strengthening frontend development skills. Also explored building a daily test-results reporting interface with HTML, CSS, JavaScript and React.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "React.js", "Python", "Django", "MySQL", "Bootstrap"],
+    icon: Code2,
+    accent: "violet",
+    mark: "S",
   },
   {
     period: "2022 — 2023",
@@ -121,7 +133,7 @@ function Experience() {
                 <BriefcaseBusiness size={25} />
               </span>
               <div>
-                <strong>2.5+</strong>
+                <strong>2.10</strong>
                 <span>Years of experience</span>
                 <small>Full Stack Developer</small>
               </div>
@@ -175,7 +187,7 @@ function Experience() {
                         </div>
                         <div className="experience-meta">
                           <span><CalendarDays size={14} />{item.date}</span>
-                          <span><MapPin size={14} />{item.location}</span>
+                          {item.location && <span><MapPin size={14} />{item.location}</span>}
                         </div>
                       </div>
                       <p className="experience-description">{item.description}</p>

@@ -6,9 +6,17 @@ import PageContainer from "../../CommenComponets/PageContainer";
 const personalDetails = [
   { label: "Birthday", value: "30 May 2000", icon: Cake },
   { label: "Address", value: "122 Sollaikkolaimedu, Asanambattu Road, Nayakkaneri Post, Ambur Tk, Tirupathur Dist 635802", icon: MapPin },
-  { label: "Study", value: "Anna University", icon: GraduationCap },
+  { label: "Study", value: "K.S.R College of Engineering (Autonomous)", icon: GraduationCap },
+  { label: "Study Period", value: "2021 — 2023", icon: GraduationCap },
+  { label: "Location", value: "Tiruchengode, Tamil Nadu", icon: MapPin },
   { label: "Age", value: "24 Years", icon: Cake },
   { label: "Degree", value: "MCA", icon: GraduationCap },
+  { label: "GPA", value: "8.19", icon: GraduationCap },
+  { label: "Undergraduate Degree", value: "B.Sc Mathematics", icon: GraduationCap },
+  { label: "Undergraduate College", value: "Mazharul Uloom College", icon: GraduationCap },
+  { label: "Undergraduate Period", value: "2018 — 2021", icon: GraduationCap },
+  { label: "Undergraduate Location", value: "Ambur, Tamil Nadu", icon: MapPin },
+  { label: "Undergraduate GPA", value: "7.4", icon: GraduationCap },
   { label: "Phone", value: "+91 8940450960", icon: Phone },
 ];
 
@@ -44,7 +52,7 @@ function AboutPreview() {
               </a>
             </div>
           )}
-          <span className="about-preview-badge"><strong>2.5+</strong> Years Experience</span>
+          <span className="about-preview-badge"><strong>2.10</strong> Years Experience</span>
           <a href="/resume.pdf" download className="about-preview-cv-button">
             <Download size={18} /> Download CV
           </a>
@@ -54,7 +62,7 @@ function AboutPreview() {
           <p className="about-eyebrow">ABOUT ME</p>
           <h2>React JS Full Stack Developer <span>&amp; Frontend Developer</span></h2>
           <p>
-            Full Stack Developer with 2.3 years of experience in developing responsive,
+            Full Stack Developer with 2 years and 10 months of experience in developing responsive,
             interactive, and user-friendly web applications. Skilled in HTML5, CSS3,
             JavaScript, React.js, Bootstrap, and Tailwind CSS for frontend development.
             Experienced in backend development using Node.js and Express.js, with database
@@ -68,7 +76,10 @@ function AboutPreview() {
           </p>
           <div className="about-preview-details">
             {personalDetails.map(({ label, value, icon: Icon }) => (
-              <div className={`about-preview-detail${label === "Address" ? " about-preview-address" : ""}`} key={label}>
+              <div
+                className={`about-preview-detail${label === "Address" ? " about-preview-address" : label === "Study" || label === "Undergraduate College" ? " about-preview-education" : ""}`}
+                key={label}
+              >
                 <Icon size={15} />
                 <span><small>{label}</small><strong>{value}</strong></span>
               </div>

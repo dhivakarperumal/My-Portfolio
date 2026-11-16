@@ -13,7 +13,7 @@ import PageContainer from "../../../CommenComponets/PageContainer.jsx";
 const highlights = [
   { value: "20+", label: "Projects Completed", icon: Code2, accent: "orange" },
   { value: "15+", label: "Technologies", icon: UsersRound, accent: "blue" },
-  { value: "2.5+", label: "Years Experience", icon: GraduationCap, accent: "pink" },
+  { value: "2.10", label: "Years Experience", icon: GraduationCap, accent: "pink" },
   { value: "100%", label: "Continuous Learning", icon: Zap, accent: "green" },
 ];
 
@@ -35,7 +35,7 @@ function AboutIntro() {
             </div>
             <div className="about-portrait-experience">
               <span><BriefcaseBusiness size={19} /></span>
-              <div><strong>2.5+</strong><small>Years Experience</small></div>
+              <div><strong>2.10</strong><small>Years Experience</small></div>
             </div>
           </div>
 
@@ -44,7 +44,7 @@ function AboutIntro() {
             <h1>Hi, I&apos;m <span>Dhivakar P</span></h1>
             <h2>Full Stack Developer</h2>
             <p className="about-hero-description">
-              I&apos;m a passionate Full Stack Developer with <strong>2.5+ years</strong> of
+              I&apos;m a passionate Full Stack Developer with <strong>2 years and 10 months</strong> of
               experience in building modern, responsive and scalable <b>web and mobile
               applications.</b> I love turning ideas into <b>real-world solutions</b> using
               the latest technologies.

@@ -728,7 +728,8 @@ img {
   font-size: 0.68rem;
 }
 
-.about-preview-address strong {
+.about-preview-address strong,
+.about-preview-education strong {
   overflow: visible;
   overflow-wrap: anywhere;
   white-space: normal;
@@ -1017,7 +1018,8 @@ img {
   text-align: right;
 }
 
-.about-preview-address strong {
+.about-preview-address strong,
+.about-preview-education strong {
   overflow-wrap: anywhere;
   white-space: normal;
 }

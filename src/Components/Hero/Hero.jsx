@@ -21,7 +21,7 @@ const technologies = [
 ];
 
 const stats = [
-  { value: "2.5+", label: "Years Experience", icon: BriefcaseBusiness },
+  { value: "2.10", label: "Years Experience", icon: BriefcaseBusiness },
   { value: "15+", label: "Projects Completed", icon: Code2 },
   { value: "10+", label: "Happy Clients", icon: Users },
   { value: "100%", label: "Commitment", icon: Heart },
@@ -90,7 +90,7 @@ function Hero() {
           ))}
           <div className="hero-experience-badge">
             <span><BriefcaseBusiness size={21} aria-hidden="true" /></span>
-            <p><strong>2.5+ Years</strong><small>of Experience</small></p>
+            <p><strong>2.10 Years</strong><small>of Experience</small></p>
           </div>
         </div>
       </div>
