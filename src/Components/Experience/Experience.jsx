@@ -93,7 +93,7 @@ const highlights = [
 
 function Experience() {
   return (
-    <section className="experience-page">
+    <section id="experience" className="experience-page">
       <div className="experience-glow experience-glow-left" />
       <div className="experience-glow experience-glow-right" />
       <div className="experience-dots experience-dots-top" />

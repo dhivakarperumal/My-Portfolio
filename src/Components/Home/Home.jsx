@@ -9,7 +9,9 @@ import ContactSection from "./ContactSection.jsx";
 function Home() {
   return (
     <>
-      <Hero />
+      <div id="home">
+        <Hero />
+      </div>
       <AboutFeatureSection />
       <TechnologyShowcase />
       <Experience />

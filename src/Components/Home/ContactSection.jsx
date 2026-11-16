@@ -91,7 +91,7 @@ function ContactSection() {
   };
 
   return (
-    <section className="contact-section" aria-labelledby="contact-title">
+    <section id="contact" className="contact-section" aria-labelledby="contact-title">
       <div className="contact-decoration contact-decoration-left" aria-hidden="true" />
       <div className="contact-decoration contact-decoration-right" aria-hidden="true" />
       <div className="contact-dots contact-dots-left" aria-hidden="true" />

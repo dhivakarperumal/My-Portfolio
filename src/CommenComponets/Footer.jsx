@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { ArrowUp, Mail, MapPin, Send } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import logo from "../../public/Images/tab.png";
 import PageContainer from "./PageContainer";
 
 const quickLinks = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/experience", label: "Experience" },
-  { to: "/contact", label: "Contact" },
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#contact", label: "Contact" },
 ];
 
 const services = [
@@ -72,13 +71,13 @@ function Footer() {
 
         <section className="portfolio-footer-grid">
           <div className="portfolio-footer-brand">
-            <Link to="/" className="portfolio-footer-logo">
+            <a href="#home" className="portfolio-footer-logo">
               <img src={logo} alt="Dhivakar P" />
               <span>
                 <strong>DHIVAKAR <em>P</em></strong>
                 <small>FULL STACK DEVELOPER</small>
               </span>
-            </Link>
+            </a>
             <p>Building modern web and mobile applications with passion and technology.</p>
             <a
               className="portfolio-footer-address"
@@ -95,7 +94,7 @@ function Footer() {
             <h3>Quick Links</h3>
             <ul>
               {quickLinks.map((link) => (
-                <li key={link.to}><Link to={link.to}>{link.label}</Link></li>
+                <li key={link.href}><a href={link.href}>{link.label}</a></li>
               ))}
             </ul>
           </div>

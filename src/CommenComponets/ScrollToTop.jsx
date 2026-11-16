@@ -1,17 +1,21 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
-  const { pathname, hash } = useLocation();
-
   useEffect(() => {
-    if (hash) {
-      document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: "instant" });
-      return;
-    }
+    const scrollToHash = () => {
+      const target = window.location.hash
+        ? document.getElementById(window.location.hash.slice(1))
+        : null;
+      if (target) {
+        target.scrollIntoView({ behavior: "instant" });
+      } else if (!window.location.hash) {
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+    };
 
-    window.scrollTo({ top: 0, behavior: "instant" });
-  }, [pathname, hash]);
+    window.addEventListener("hashchange", scrollToHash);
+    return () => window.removeEventListener("hashchange", scrollToHash);
+  }, []);
 
   return null;
 };

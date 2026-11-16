@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ArrowRight, CheckCircle2, Download, Mail, MapPin, Phone, GraduationCap, Cake, MessageCircle } from "lucide-react";
-import { Link } from "react-router-dom";
 import logo from "../../../public/Images/photo.jpg";
 import PageContainer from "../../CommenComponets/PageContainer";
 
@@ -80,9 +79,9 @@ function AboutPreview() {
             </div>
           </div>
           <div className="about-preview-actions">
-            <Link to="/about" className="about-preview-primary">
+            <a href="#about" className="about-preview-primary">
               Discover More <ArrowRight size={17} />
-            </Link>
+            </a>
             <a href="https://wa.me/918940450960?text=Hello%20there!" target="_blank" rel="noreferrer" className="about-preview-whatsapp">
               <Phone size={16} /> Chat With Us
             </a>

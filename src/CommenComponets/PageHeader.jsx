@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import { ChevronRight, Home } from "lucide-react";
 
 const PageHeader = ({ title, subtitle, background }) => {
@@ -100,10 +99,10 @@ const PageHeader = ({ title, subtitle, background }) => {
 
         {/* Breadcrumb pill */}
         <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md rounded-full px-5 py-2 text-sm text-gray-300 shadow-md mt-1">
-          <Link to="/" className="flex items-center gap-1 hover:text-white transition-colors font-semibold text-white">
+          <a href="#home" className="flex items-center gap-1 hover:text-white transition-colors font-semibold text-white">
             <Home size={13} />
             Home
-          </Link>
+          </a>
           <ChevronRight size={13} className="text-gray-400" />
           <span className="text-[#06C167] font-bold">{title}</span>
         </div>

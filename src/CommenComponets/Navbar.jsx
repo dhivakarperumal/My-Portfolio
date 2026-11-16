@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
 import {
   Award,
   ChevronRight,
@@ -22,13 +21,13 @@ import logo from "../../public/Images/tab.png";
 import PageContainer from "./PageContainer";
 
 const navLinks = [
-  { to: "/", label: "Home", icon: Home },
-  { to: "/about", label: "About", icon: User },
-  { to: "/#skills", label: "Skills", icon: Sparkles },
-  { to: "/#services", label: "Services", icon: Layers },
-  { to: "/#projects", label: "Projects", icon: FolderGit2 },
-  { to: "/experience", label: "Experience", icon: Award },
-  { to: "/contact", label: "Contact", icon: Send },
+  { href: "#home", label: "Home", icon: Home },
+  { href: "#about", label: "About", icon: User },
+  { href: "#skills", label: "Skills", icon: Sparkles },
+  { href: "#experience", label: "Experience", icon: Award },
+  { href: "#projects", label: "Projects", icon: FolderGit2 },
+  { href: "#services", label: "Services", icon: Layers },
+  { href: "#contact", label: "Contact", icon: Send },
 ];
 
 const socialLinks = [
@@ -56,15 +55,9 @@ function Navbar() {
     }
     return false;
   });
-  const location = useLocation();
-  const [prevLocationKey, setPrevLocationKey] = useState(location.key);
-
-  if (prevLocationKey !== location.key) {
-    setPrevLocationKey(location.key);
-    if (mobileMenuOpen) {
-      setMobileMenuOpen(false);
-    }
-  }
+  const [activeLink, setActiveLink] = useState(
+    () => window.location.hash || "#home"
+  );
 
   const toggleTheme = () => {
     const nextIsLight = !isLight;
@@ -102,30 +95,30 @@ function Navbar() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  const isLinkActive = (to) => {
-    if (to.startsWith("/#")) {
-      const hash = to.replace("/", "");
-      return location.pathname === "/" && location.hash === hash;
-    }
-    if (to === "/") {
-      return location.pathname === "/" && !location.hash;
-    }
-    return location.pathname === to;
-  };
-
-  const handleLinkClick = (e, to) => {
-    closeMobileMenu();
-    if (to.startsWith("/#")) {
-      const targetId = to.replace("/#", "");
-      if (location.pathname === "/") {
-        e.preventDefault();
-        const el = document.getElementById(targetId);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-          window.history.pushState(null, "", `#${targetId}`);
+  useEffect(() => {
+    const updateActiveLink = () => {
+      const sections = document.querySelectorAll("main section[id]");
+      let currentSection = "#home";
+      sections.forEach((section) => {
+        if (section.getBoundingClientRect().top <= 120) {
+          currentSection = `#${section.id}`;
         }
-      }
-    }
+      });
+      setActiveLink(currentSection);
+    };
+
+    window.addEventListener("scroll", updateActiveLink, { passive: true });
+    window.addEventListener("hashchange", updateActiveLink);
+    updateActiveLink();
+    return () => {
+      window.removeEventListener("scroll", updateActiveLink);
+      window.removeEventListener("hashchange", updateActiveLink);
+    };
+  }, []);
+
+  const handleLinkClick = (href) => {
+    closeMobileMenu();
+    setActiveLink(href);
   };
 
   return (
@@ -136,10 +129,10 @@ function Navbar() {
           className="flex min-h-[64px] items-center justify-between gap-3 sm:min-h-[68px] sm:gap-6"
         >
           {/* Logo & Brand Identity */}
-          <Link
-            to="/"
+          <a
+            href="#home"
             className="flex min-w-0 shrink items-center gap-2.5 sm:gap-3"
-            onClick={closeMobileMenu}
+            onClick={() => handleLinkClick("#home")}
           >
             <img
               src={logo}
@@ -155,17 +148,17 @@ function Navbar() {
                 FULL STACK DEVELOPER
               </small>
             </span>
-          </Link>
+          </a>
 
           {/* Desktop Nav Links */}
           <div className="hidden items-center gap-6 lg:flex xl:gap-8">
             {navLinks.map((link) => {
-              const active = isLinkActive(link.to);
+              const active = activeLink === link.href;
               return (
-                <NavLink
-                  key={link.to}
-                  to={link.to}
-                  onClick={(e) => handleLinkClick(e, link.to)}
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => handleLinkClick(link.href)}
                   className={`portfolio-navbar-link relative py-2 text-[13px] font-semibold transition-colors ${
                     active ? "portfolio-navbar-link-active" : ""
                   }`}
@@ -178,7 +171,7 @@ function Navbar() {
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
-                </NavLink>
+                </a>
               );
             })}
           </div>
@@ -301,13 +294,13 @@ function Navbar() {
                 {/* Navigation Links List */}
                 <nav aria-label="Mobile Navigation" className="flex flex-col gap-2">
                   {navLinks.map((link) => {
-                    const active = isLinkActive(link.to);
+                    const active = activeLink === link.href;
                     const Icon = link.icon;
                     return (
-                      <NavLink
-                        key={link.to}
-                        to={link.to}
-                        onClick={(e) => handleLinkClick(e, link.to)}
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => handleLinkClick(link.href)}
                         className={`group flex items-center justify-between rounded-xl px-4 py-3 transition-all duration-200 ${
                           active
                             ? "portfolio-mobile-link-active border border-orange-500/40 bg-gradient-to-r from-orange-500/20 via-orange-500/10 to-transparent text-orange-400 font-bold shadow-[0_0_15px_rgba(249,115,22,0.12)]"
@@ -339,7 +332,7 @@ function Navbar() {
                             />
                           )}
                         </div>
-                      </NavLink>
+                      </a>
                     );
                   })}
                 </nav>

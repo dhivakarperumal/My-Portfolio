@@ -4,7 +4,7 @@ import "./About.css";
 
 function AboutFeatureSection() {
   return (
-    <section className="about-section" aria-label="About Dhivakar">
+    <section id="about" className="about-section" aria-label="About Dhivakar">
       <AboutIntro />
       <AboutPrinciples />
     </section>

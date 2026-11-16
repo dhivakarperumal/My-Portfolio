@@ -4,7 +4,6 @@ import {
   Download,
   Sparkles,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import logo from "../../../public/Images/photo.jpg";
 import PageContainer from "../../CommenComponets/PageContainer";
 import Skills from "./Skills";
@@ -28,9 +27,9 @@ function About() {
             <a href="/resume.pdf" download className="about-primary-button">
               Download Resume <Download size={17} />
             </a>
-            <Link to="/contact" className="about-secondary-button">
+            <a href="#contact" className="about-secondary-button">
               More About Me <ArrowRight size={16} />
-            </Link>
+            </a>
           </div>
         </div>
 

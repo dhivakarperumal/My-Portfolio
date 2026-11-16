@@ -8,7 +8,6 @@ import {
   SiNodedotjs,
   SiReact,
 } from "react-icons/si";
-import { Link } from "react-router-dom";
 import logo from "../../../public/Images/photo.jpg";
 
 const technologies = [
@@ -45,12 +44,12 @@ function Hero() {
           </p>
 
           <div className="hero-actions">
-            <Link to="/#projects" className="hero-primary-button">
+            <a href="#projects" className="hero-primary-button">
               <span>View My Work</span><ArrowRight size={19} />
-            </Link>
-            <Link to="/contact" className="hero-secondary-button">
+            </a>
+            <a href="#contact" className="hero-secondary-button">
               <Mail size={18} /><span>Contact Me</span>
-            </Link>
+            </a>
           </div>
 
           <div className="hero-stats">
