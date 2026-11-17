@@ -1,5 +1,19 @@
 import { useState } from "react";
-import { ArrowUp, Mail, MapPin, Phone, Send } from "lucide-react";
+import {
+  Briefcase,
+  Code,
+  Folder,
+  Home,
+  Mail,
+  Megaphone,
+  MapPin,
+  Palette,
+  Phone,
+  Send,
+  Settings,
+  Smartphone,
+  User,
+} from "lucide-react";
 import {
   FaFacebookF,
   FaGithub,
@@ -11,23 +25,24 @@ import logo from "../../public/Images/tab.png";
 import PageContainer from "./PageContainer";
 
 const quickLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#services", label: "Services" },
-  { href: "#contact", label: "Contact" },
+  { href: "#home", label: "Home", icon: Home },
+  { href: "#about", label: "About", icon: User },
+  { href: "#skills", label: "Skills", icon: Code },
+  { href: "#experience", label: "Experience", icon: Briefcase },
+  { href: "#projects", label: "Projects", icon: Folder },
+  { href: "#services", label: "Services", icon: Settings },
+  { href: "#contact", label: "Contact", icon: Mail },
 ];
 
 const services = [
-  "Web Development",
-  "Mobile App Development",
-  "Backend Development",
-  "UI/UX Design",
+  { label: "Web Development", icon: Code },
+  { label: "Mobile App Development", icon: Smartphone },
+  { label: "Backend Development", icon: Settings },
+  { label: "UI/UX Design", icon: Palette },
+  { label: "Digital Marketing", icon: Megaphone },
 ];
 
-const contactAddress = "122 Sollaikkolaimedu, Asanambattu Road, Nayakkaneri Post, Ambur Tk, Tirupathur Dist 635802";
+const contactAddress = "122 Sollaikkolaimedu, Nayakkaneri Post, Ambur Tk, Tirupathur Dist 635802";
 
 const socialLinks = [
   { label: "GitHub", href: "https://github.com/dhivakarperumal", icon: FaGithub },
@@ -47,8 +62,6 @@ function Footer() {
     setSubmitted(true);
     setEmail("");
   };
-
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <footer className="portfolio-footer">
@@ -81,17 +94,21 @@ function Footer() {
 
           <div>
             <h3>Quick Links</h3>
-            <ul>
-              {quickLinks.map((link) => (
-                <li key={link.href}><a href={link.href}>{link.label}</a></li>
+            <ul className="portfolio-footer-icon-links">
+              {quickLinks.map(({ href, label, icon: Icon }) => (
+                <li key={href}>
+                  <a href={href}><Icon size={16} aria-hidden="true" />{label}</a>
+                </li>
               ))}
             </ul>
           </div>
 
           <div>
             <h3>Services</h3>
-            <ul>
-              {services.map((service) => <li key={service}>{service}</li>)}
+            <ul className="portfolio-footer-icon-links">
+              {services.map(({ label, icon: Icon }) => (
+                <li key={label}><Icon size={16} aria-hidden="true" />{label}</li>
+              ))}
             </ul>
           </div>
 
@@ -145,11 +162,10 @@ function Footer() {
       <div className="portfolio-footer-bottom">
         <PageContainer fullWidth className="portfolio-footer-bottom-inner">
           <p>© 2020 Dhivakar P. All rights reserved.</p>
-          <p>Designed &amp; Developed with <span aria-label="love">❤️</span> by Dhivakar P</p>
+          
         </PageContainer>
       </div>
 
-     
     </footer>
   );
 }
