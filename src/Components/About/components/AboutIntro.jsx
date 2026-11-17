@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 import resumePdf from "../../../Datas/DHIVAKAR P.pdf";
 import { projectCount } from "../../../Datas/projectStats.js";
-import logo from "../../../../public/Images/photo.jpg";
+import aboutImage from "../../../../public/Images/Modern Portrait with Orange Desk Glow.png";
 import PageContainer from "../../../CommenComponets/PageContainer.jsx";
 
 const highlights = [
@@ -39,7 +39,7 @@ function AboutIntro() {
             <div className="about-portrait-glow" aria-hidden="true" />
             <span className="about-portrait-note">Build<br />Develop<br />Innovate</span>
             <div className="about-portrait">
-              <img src={logo} alt="Dhivakar P" />
+              <img src={aboutImage} alt="Dhivakar P working at his desk" />
             </div>
             <div className="about-portrait-experience">
               <span><BriefcaseBusiness size={19} /></span>
