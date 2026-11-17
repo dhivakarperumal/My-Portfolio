@@ -14,12 +14,12 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import resumePdf from "../../../Datas/DHIVAKAR P.pdf";
-import { mobileAppCount } from "../../../Datas/projectStats.js";
+import { mobileAppCount, webAppCount } from "../../../Datas/projectStats.js";
 import aboutImage from "../../../../public/Images/Modern Portrait with Orange Desk Glow.png";
 import PageContainer from "../../../CommenComponets/PageContainer.jsx";
 
 const highlights = [
-  { value: mobileAppCount, label: "Mobile Apps", icon: Code2, accent: "orange" },
+  { value: `${webAppCount} / ${mobileAppCount}`, label: "Web / Mobile Apps", icon: Code2, accent: "orange" },
   { value: "15+", label: "Technologies", icon: UsersRound, accent: "blue" },
   { value: "2.10", label: "Years Experience", icon: GraduationCap, accent: "pink" },
   { value: "100%", label: "Continuous Learning", icon: Zap, accent: "green" },

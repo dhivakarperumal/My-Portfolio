@@ -8,7 +8,7 @@ import {
   UsersRound,
 } from "lucide-react";
 import PageContainer from "../../CommenComponets/PageContainer";
-import { mobileAppCount } from "../../Datas/projectStats.js";
+import { mobileAppCount, webAppCount } from "../../Datas/projectStats.js";
 import "./Experience.css";
 
 const experiences = [
@@ -82,7 +82,7 @@ const technologyAccents = {
 };
 
 const highlights = [
-  { value: mobileAppCount, label: "Mobile Apps", icon: Code2, accent: "violet" },
+  { value: `${webAppCount} / ${mobileAppCount}`, label: "Web / Mobile Apps", icon: Code2, accent: "violet" },
   { value: "15+", label: "Happy clients", icon: UsersRound, accent: "blue" },
   { value: "100%", label: "Client satisfaction", icon: Heart, accent: "pink" },
   { value: "Continuous", label: "Learning & growth", icon: GraduationCap, accent: "green" },
