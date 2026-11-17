@@ -2032,9 +2032,11 @@ img {
   position: absolute;
   z-index: 2;
   top: 50%;
-  left: 50%;
+  left: 54%;
   width: min(100%, 520px);
   transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  mask-image: radial-gradient(ellipse at center, #000 72%, transparent 100%);
 }
 
 .hero-profile img {
@@ -2042,7 +2044,6 @@ img {
   width: 100%;
   height: auto;
   object-fit: contain;
-  mask-image: radial-gradient(ellipse at center, #000 67%, transparent 100%);
 }
 
 .hero-profile-caption {
@@ -2233,7 +2234,7 @@ img {
   .hero-socials > span { font-size: .75rem; }
   .hero-socials a { width: 39px; height: 39px; }
   .hero-visual { min-height: 390px; margin-top: 4px; }
-  .hero-profile { width: min(100%, 410px); }
+  .hero-profile { left: 50%; width: min(100%, 410px); }
   .hero-orbit-one { width: min(90%, 340px); }
   .hero-orbit-two { width: min(73%, 275px); }
   .hero-profile-caption { top: 7%; left: 0; min-width: 164px; gap: 8px; padding: 10px; }
