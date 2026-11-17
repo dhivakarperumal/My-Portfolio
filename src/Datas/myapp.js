@@ -1,29 +1,7 @@
 export const myApps = [
+    
     {
         id: 1,
-        title: "Life Tracking App",
-        cardTitle: "Life Ledger",
-        imageAlt: "Life Ledger personal tracking dashboard",
-        subtitle: "Personal Finance Tracker",
-        projectSub: "MobileApp · Personal Life Tracking",
-        technology: "React Native",
-        cardTechnologies: ["React Native", "Expo", "AsyncStorage"],
-        liveUrl: "https://lifetracking.qtechx.com/",
-        category: "mobile",
-        badge: "Mobile App",
-        badgeIcon: "fas fa-mobile-alt",
-        description: "A personal dashboard app for tracking expenses, managing a budget, writing diary entries, and keeping life memories together.",
-        images: [
-            "assets/MobileApp/l1.jpeg",
-            "assets/MobileApp/l2.jpeg",
-            "assets/MobileApp/l3.jpeg",
-            "assets/MobileApp/l4.jpeg",
-            "assets/MobileApp/l5.jpeg",
-        ],
-        delay: 100
-    },
-    {
-        id: 2,
         title: "Kavi Dry Fruits App",
         cardTitle: "Kavi’s Dry Fruits",
         imageAlt: "Kavi’s Dry Fruits online store",
@@ -48,49 +26,9 @@ export const myApps = [
         delay: 150
     },
     
+   
     {
-        id: 3,
-        title: "Supermarket Shopping App",
-        cardTitle: "Supermarket & Grocery App",
-        imageAlt: "Supermarket and grocery shopping",
-        subtitle: "Online Grocery Shopping & Delivery",
-        projectSub: "MobileApp · Grocery E-Commerce",
-        technology: "React Native",
-        category: "mobile",
-        badge: "Mobile App",
-        badgeIcon: "fas fa-mobile-alt",
-        description: "A grocery shopping app for discovering supermarket products, building an order, and arranging delivery.",
-        images: [
-            "assets/MobileApp/s1.jpeg",
-            "assets/MobileApp/s2.jpeg",
-            "assets/MobileApp/s3.jpeg",
-            "assets/MobileApp/s4.jpeg"
-        ],
-        delay: 250
-    },
-    {
-        id: 4,
-        title: "Supermarket Billing App",
-        cardTitle: "Supermarket Billing App",
-        imageAlt: "Supermarket billing and inventory dashboard",
-        subtitle: "Inventory, Billing & Sales Management",
-        projectSub: "Mobile App · Supermarket Billing",
-        technology: "React Native",
-        category: "mobile",
-        badge: "Mobile App",
-        badgeIcon: "fas fa-mobile-alt",
-        description: "A supermarket management app for tracking inventory, managing bills, and monitoring sales and revenue.",
-        images: [
-            "assets/MobileApp/b1.jpeg",
-            "assets/MobileApp/b2.jpeg",
-            "assets/MobileApp/b3.jpeg",
-            "assets/MobileApp/b4.jpeg",
-            "assets/MobileApp/b5.jpeg"
-        ],
-        delay: 275
-    },
-    {
-        id: 5,
+        id: 2,
         title: "Gym & Fitness App",
         cardTitle: "DAP Fitness App",
         imageAlt: "DAP gym and fitness website",
@@ -112,7 +50,7 @@ export const myApps = [
         delay: 300
     },
     {
-        id: 6,
+        id: 3,
         title: "Q Techx Company App",
         cardTitle: "Q Techx App",
         imageAlt: "Q Techx company management system",
@@ -137,7 +75,94 @@ export const myApps = [
         delay: 350
     },
     {
+        id: 4,
+        title: "Sri Gold App",
+        cardTitle: "Sri Gold Management",
+        imageAlt: "Sri Gold jewellery shop management app",
+        subtitle: "Gold Shop Management",
+        projectSub: "MobileApp · Jewellery Shop Management",
+        technology: "React Native",
+        cardTechnologies: ["React Native"],
+        playStoreUrl: "https://play.google.com/store/apps/details?id=com.qtechx.goldshop",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "Sri Gold is a modern gold shop management application for managing jewellery products, customers, gold rates, sales, billing, gold loans, enquiries, and reports from a centralized dashboard.",
+        images: [
+            "assets/MobileApp/sri2.jpeg",
+            "assets/MobileApp/sri1.jpeg",
+            "assets/MobileApp/sri3.jpeg",
+            "assets/MobileApp/sri4.jpeg",
+            "assets/MobileApp/sri5.jpeg",
+        ],
+        delay: 475
+    },
+    {
+        id: 5,
+        title: "Life Tracking App",
+        cardTitle: "Life Ledger",
+        imageAlt: "Life Ledger personal tracking dashboard",
+        subtitle: "Personal Finance Tracker",
+        projectSub: "MobileApp · Personal Life Tracking",
+        technology: "React Native",
+        cardTechnologies: ["React Native", "Expo", "AsyncStorage"],
+        liveUrl: "https://lifetracking.qtechx.com/",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A personal dashboard app for tracking expenses, managing a budget, writing diary entries, and keeping life memories together.",
+        images: [
+            "assets/MobileApp/l1.jpeg",
+            "assets/MobileApp/l2.jpeg",
+            "assets/MobileApp/l3.jpeg",
+            "assets/MobileApp/l4.jpeg",
+            "assets/MobileApp/l5.jpeg",
+        ],
+        delay: 100
+    },
+     {
+        id: 6,
+        title: "Supermarket Shopping App",
+        cardTitle: "Supermarket & Grocery App",
+        imageAlt: "Supermarket and grocery shopping",
+        subtitle: "Online Grocery Shopping & Delivery",
+        projectSub: "MobileApp · Grocery E-Commerce",
+        technology: "React Native",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A grocery shopping app for discovering supermarket products, building an order, and arranging delivery.",
+        images: [
+            "assets/MobileApp/s1.jpeg",
+            "assets/MobileApp/s2.jpeg",
+            "assets/MobileApp/s3.jpeg",
+            "assets/MobileApp/s4.jpeg"
+        ],
+        delay: 250
+    },
+    {
         id: 7,
+        title: "Supermarket Billing App",
+        cardTitle: "Supermarket Billing App",
+        imageAlt: "Supermarket billing and inventory dashboard",
+        subtitle: "Inventory, Billing & Sales Management",
+        projectSub: "Mobile App · Supermarket Billing",
+        technology: "React Native",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A supermarket management app for tracking inventory, managing bills, and monitoring sales and revenue.",
+        images: [
+            "assets/MobileApp/b1.jpeg",
+            "assets/MobileApp/b2.jpeg",
+            "assets/MobileApp/b3.jpeg",
+            "assets/MobileApp/b4.jpeg",
+            "assets/MobileApp/b5.jpeg"
+        ],
+        delay: 275
+    },
+    {
+        id: 8,
         title: "Veetu Rusi Food User App",
         cardTitle: "Veetu Rusi App",
         imageAlt: "Veetu Rusi food ordering website",
@@ -158,7 +183,7 @@ export const myApps = [
         delay: 400
     },
     {
-        id: 8,
+        id: 9,
         title: "Veetu Rusi Home Chef App",
         cardTitle: "Veetu Rusi Home Chef",
         imageAlt: "Veetu Rusi Home Chef dashboard",
@@ -178,26 +203,7 @@ export const myApps = [
         ],
         delay: 425
     },
-    {
-        id: 9,
-        title: "Car Service Booking App",
-        cardTitle: "Car Service Booking",
-        imageAlt: "Car service booking and management system",
-        subtitle: "Vehicle Service Booking & Management",
-        projectSub: "MobileApp · Automotive Services",
-        technology: "React Native",
-        category: "mobile",
-        badge: "Mobile App",
-        badgeIcon: "fas fa-mobile-alt",
-        description: "A car service app concept for finding vehicle services, booking appointments, and managing service requests.",
-        images: [
-            "assets/MobileApp/c2.jpeg",
-            "assets/MobileApp/c1.jpeg",
-            "assets/MobileApp/c3.jpeg",
-            "assets/MobileApp/c4.jpeg",
-        ],
-        delay: 450
-    },
+   
     {
         id: 10,
         title: "TrackFina – Admin App",
@@ -264,6 +270,27 @@ export const myApps = [
             "assets/MobileApp/p4.jpeg"
         ],
         delay: 300
+    },
+    
+     {
+        id: 13,
+        title: "Car Service Booking App",
+        cardTitle: "Car Service Booking",
+        imageAlt: "Car service booking and management system",
+        subtitle: "Vehicle Service Booking & Management",
+        projectSub: "MobileApp · Automotive Services",
+        technology: "React Native",
+        category: "mobile",
+        badge: "Mobile App",
+        badgeIcon: "fas fa-mobile-alt",
+        description: "A car service app concept for finding vehicle services, booking appointments, and managing service requests.",
+        images: [
+            "assets/MobileApp/c2.jpeg",
+            "assets/MobileApp/c1.jpeg",
+            "assets/MobileApp/c3.jpeg",
+            "assets/MobileApp/c4.jpeg",
+        ],
+        delay: 450
     },
 ];
 

@@ -1,9 +1,9 @@
 import { Code2, Layers3, UsersRound, Zap } from "lucide-react";
-import { projectCount } from "../../../Datas/projectStats.js";
+import { mobileAppCount } from "../../../Datas/projectStats.js";
 
 const stats = [
   { value: "20+", label: "Technologies", icon: Code2, accent: "#f97316" },
-  { value: projectCount, label: "Projects Listed", icon: Layers3, accent: "#c026d3" },
+  { value: mobileAppCount, label: "Mobile Apps", icon: Layers3, accent: "#c026d3" },
   { value: "2.10", label: "Years Experience", icon: UsersRound, accent: "#f43f5e" },
   { value: "Always", label: "Learning New Technologies", icon: Zap, accent: "#22c55e" },
 ];

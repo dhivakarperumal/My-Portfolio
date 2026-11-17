@@ -1,6 +1,6 @@
 import { ArrowRight, BriefcaseBusiness, Code2, Heart, Mail, Users } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-import { projectCount } from "../../Datas/projectStats.js";
+import { mobileAppCount } from "../../Datas/projectStats.js";
 import {
   SiExpress,
   SiJavascript,
@@ -23,7 +23,7 @@ const technologies = [
 
 const stats = [
   { value: "2.10", label: "Years Experience", icon: BriefcaseBusiness },
-  { value: projectCount, label: "Projects Listed", icon: Code2 },
+  { value: mobileAppCount, label: "Mobile Apps", icon: Code2 },
   { value: "10+", label: "Happy Clients", icon: Users },
   { value: "100%", label: "Commitment", icon: Heart },
 ];
