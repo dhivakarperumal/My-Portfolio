@@ -9,7 +9,7 @@ import {
   SiNodedotjs,
   SiReact,
 } from "react-icons/si";
-import heroImage from "../../../public/Images/Thoughtful Workspace with Orange Halo.png";
+import heroImage from "../../../public/Images/Modern Portrait with Orange Desk Glow.png";
 
 const technologies = [
   { label: "React", icon: SiReact, color: "#61dafb", className: "hero-tech-react" },
