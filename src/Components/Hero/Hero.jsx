@@ -77,8 +77,6 @@ function Hero() {
         </div>
 
         <div className="hero-visual" aria-label="Developer tools and technologies">
-          <div className="hero-orbit hero-orbit-one" aria-hidden="true" />
-          <div className="hero-orbit hero-orbit-two" aria-hidden="true" />
           <div className="hero-profile">
             <img src={heroImage} alt="Dhivakar P in a tech studio" />
           </div>

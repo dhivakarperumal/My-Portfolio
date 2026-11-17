@@ -2015,19 +2015,6 @@ img {
   min-height: 560px;
 }
 
-.hero-orbit {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  border: 1px dashed rgba(249, 115, 22, .55);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) rotate(-24deg) scaleX(.86);
-}
-
-.hero-orbit-one { width: min(78%, 440px); aspect-ratio: 1; }
-.hero-orbit-two { width: min(64%, 360px); aspect-ratio: 1; transform: translate(-50%, -50%) rotate(54deg); }
-
 .hero-profile {
   position: absolute;
   z-index: 2;
@@ -2036,7 +2023,6 @@ img {
   width: min(100%, 520px);
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
-  mask-image: radial-gradient(ellipse at center, #000 72%, transparent 100%);
 }
 
 .hero-profile img {
@@ -2046,9 +2032,22 @@ img {
   object-fit: contain;
 }
 
+.hero-profile::after {
+  position: absolute;
+  z-index: 1;
+  right: 10%;
+  bottom: 0;
+  left: 10%;
+  height: 12%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, .42));
+  content: "";
+  filter: blur(10px);
+  pointer-events: none;
+}
+
 .hero-profile-caption {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   top: 13%;
   left: 1%;
   display: flex;
@@ -2084,7 +2083,7 @@ img {
 
 .hero-profile-note {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   top: 9%;
   right: 1%;
   color: #f5d6c5;
@@ -2094,7 +2093,7 @@ img {
 
 .hero-tech-card {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   align-items: center;
   display: flex;
   gap: 10px;
@@ -2135,7 +2134,7 @@ img {
 
 .hero-experience-badge {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   right: 0;
   bottom: 7%;
   display: flex;
@@ -2235,8 +2234,6 @@ img {
   .hero-socials a { width: 39px; height: 39px; }
   .hero-visual { min-height: 390px; margin-top: 4px; }
   .hero-profile { left: 50%; width: min(100%, 410px); }
-  .hero-orbit-one { width: min(90%, 340px); }
-  .hero-orbit-two { width: min(73%, 275px); }
   .hero-profile-caption { top: 7%; left: 0; min-width: 164px; gap: 8px; padding: 10px; }
   .hero-profile-caption > svg { width: 21px; }
   .hero-profile-caption strong { font-size: .72rem; }
