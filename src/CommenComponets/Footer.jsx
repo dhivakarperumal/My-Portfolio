@@ -127,41 +127,36 @@ function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
-
-          <div className="portfolio-footer-newsletter">
-            <div className="portfolio-newsletter-copy">
-              <h3>Stay <span>in the Loop</span></h3>
-              <p>Get updates on my latest projects, articles, and developer insights.</p>
+            <div className="portfolio-footer-newsletter">
+              <form className="portfolio-newsletter-form" onSubmit={handleSubmit}>
+                <label className="sr-only" htmlFor="footer-email">Email address</label>
+                <div className="portfolio-email-field">
+                  <Mail size={18} />
+                  <input
+                    id="footer-email"
+                    type="email"
+                    value={email}
+                    onChange={(event) => {
+                      setEmail(event.target.value);
+                      setSubmitted(false);
+                    }}
+                    placeholder="Enter your email address"
+                    required
+                  />
+                  <button type="submit">
+                    {submitted ? "Subscribed" : "Subscribe"}
+                    <Send size={18} />
+                  </button>
+                </div>
+              </form>
             </div>
-            <form className="portfolio-newsletter-form" onSubmit={handleSubmit}>
-              <label className="sr-only" htmlFor="footer-email">Email address</label>
-              <div className="portfolio-email-field">
-                <Mail size={18} />
-                <input
-                  id="footer-email"
-                  type="email"
-                  value={email}
-                  onChange={(event) => {
-                    setEmail(event.target.value);
-                    setSubmitted(false);
-                  }}
-                  placeholder="Enter your email address"
-                  required
-                />
-              </div>
-              <button type="submit">
-                {submitted ? "Subscribed" : "Subscribe"}
-                <Send size={18} />
-              </button>
-            </form>
           </div>
         </section>
       </PageContainer>
 
       <div className="portfolio-footer-bottom">
         <PageContainer fullWidth className="portfolio-footer-bottom-inner">
-          <p>© 2020 Dhivakar P. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Dhivakar P. All rights reserved.</p>
           
         </PageContainer>
       </div>
