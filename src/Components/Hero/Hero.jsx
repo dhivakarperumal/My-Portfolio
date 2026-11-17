@@ -9,7 +9,7 @@ import {
   SiNodedotjs,
   SiReact,
 } from "react-icons/si";
-import logo from "../../../public/Images/photo.jpg";
+import heroImage from "../../../public/Images/Tech Studio Portrait with Orange Halo.png";
 
 const technologies = [
   { label: "React", icon: SiReact, color: "#61dafb", className: "hero-tech-react" },
@@ -80,8 +80,7 @@ function Hero() {
           <div className="hero-orbit hero-orbit-one" aria-hidden="true" />
           <div className="hero-orbit hero-orbit-two" aria-hidden="true" />
           <div className="hero-profile">
-            <div className="hero-profile-glow" aria-hidden="true" />
-            <img src={logo} alt="Dhivakar P" />
+            <img src={heroImage} alt="Dhivakar P in a tech studio" />
           </div>
           <div className="hero-profile-caption">
             <Code2 size={26} aria-hidden="true" />
